@@ -1,4 +1,4 @@
-# EscapeTheWoods
+# Escape The Woods
 This is a simple text based game inspired by Zork and Nethack about escaping
 the woods.
 
