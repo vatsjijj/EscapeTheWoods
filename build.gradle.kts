@@ -15,10 +15,8 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
-    }
+java.toolchain {
+    languageVersion.set(JavaLanguageVersion.of(21))
 }
 
 tasks.test {
@@ -27,4 +25,10 @@ tasks.test {
 
 application {
     mainClass.set("org.etw.EscapeTheWoods.Main")
+}
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = application.mainClass.get()
+    }
 }
