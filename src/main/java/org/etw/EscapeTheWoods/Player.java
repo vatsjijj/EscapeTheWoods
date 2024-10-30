@@ -1,5 +1,6 @@
 package org.etw.EscapeTheWoods;
 
-public class Player extends Entity {
+// Supposed to extend on Entity.
+public class Player {
     
 }
