@@ -10,7 +10,7 @@ public class Player extends Entity {
     private int score;
 
     public Player() {
-        super(100, 100, 1, 20);
+        super(100, 100, 1, 10);
         this.inventory = new ArrayList<>();
         this.temperature = 98.6;
         this.thirst = 0;
