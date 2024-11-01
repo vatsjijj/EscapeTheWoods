@@ -3,5 +3,13 @@
 package org.etw.EscapeTheWoods;
 
 public class World {
-    
+    private int time;
+    private String weather;
+    private int worldTemp;
+
+    public World(int time, String weather, int worldTemp){
+        this.time = time;
+        this.weather = weather;
+        this.worldTemp = worldTemp;
+    }
 }
