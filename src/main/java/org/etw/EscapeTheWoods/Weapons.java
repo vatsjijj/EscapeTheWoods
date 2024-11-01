@@ -3,7 +3,8 @@ package org.etw.EscapeTheWoods;
 public class Weapons extends Item{
 private int DamageMultiplyer;
 
-    public Weapons(int DamageMultiplyer){ 
+    public Weapons(String name, String description, int rarity, int DamageMultiplyer){ 
+        super(name, description, rarity);
         this.DamageMultiplyer = DamageMultiplyer;
     }
 }
