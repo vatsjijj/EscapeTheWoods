@@ -30,10 +30,10 @@ public class Entity {
     }
 
     public boolean attack(Entity entity) {
-        return entity.damage(damage);
+        return entity.takeDamage(damage);
     }
 
-    public boolean damage(int amount) {
+    public boolean takeDamage(int amount) {
         // This needs to have a random chance but
         // for now we'll pretend that it always
         // works.

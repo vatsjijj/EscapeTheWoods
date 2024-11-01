@@ -1,5 +1,6 @@
 package org.etw.EscapeTheWoods;
 
+<<<<<<< HEAD
 public class Food extends Item{
 
     private int quantity;
@@ -10,3 +11,6 @@ public class Food extends Item{
     }
 
 }
+=======
+public class Food {}
+>>>>>>> origin/main

@@ -1,6 +1,7 @@
 package org.etw.EscapeTheWoods;
 
 public class Item {
+<<<<<<< HEAD
 
     private String name;
     private String description;
@@ -11,4 +12,6 @@ public class Item {
         this.description = description;
         this.rarity = rarity;
     }
+=======
+>>>>>>> origin/main
 }
