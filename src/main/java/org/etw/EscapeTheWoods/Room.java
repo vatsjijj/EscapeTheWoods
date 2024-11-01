@@ -1,6 +1,7 @@
 package org.etw.EscapeTheWoods;
 
 public class Room {
+<<<<<<< HEAD
     private double difficulty;
     private String description;
 
@@ -10,4 +11,7 @@ public class Room {
     }
 
 
+=======
+//fake
+>>>>>>> origin/main
 }

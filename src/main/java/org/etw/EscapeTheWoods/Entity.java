@@ -1,5 +1,6 @@
 package org.etw.EscapeTheWoods;
 
+// Hello 
 public class Entity {
     private double health;
     private double stamina;
