@@ -27,4 +27,28 @@ public class Player extends Entity {
         // Need to expand on the Food class.
         return true;
     }
+
+    public void addItem(Item item) {
+        inventory.add(item);
+    }
+
+    public double getTemperature() {
+        return this.temperature;
+    }
+
+    public double getHunger() {
+        return this.hunger;
+    }
+
+    public double getThirst() {
+        return this.thirst;
+    }
+
+    public ArrayList<Item> getInventory() {
+        return this.inventory;
+    }
+
+    public int getScore() {
+        return this.score;
+    }
 }
