@@ -9,6 +9,7 @@ public class Enemy extends Entity {
         super(health, stamina, damage, speed);
     }
 
+    // Enemy has a 20% chance to retreat at half health
     public boolean retreat() {
         double health = getHealth();
         if (health <= health / 2) {
@@ -17,14 +18,11 @@ public class Enemy extends Entity {
             if (rand_int > 80) {
                 return true;
             }
-
         }
-        
         return false;
     }
 
     public void specialAttack() {
-        
         
     }
 }
