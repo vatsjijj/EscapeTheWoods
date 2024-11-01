@@ -54,6 +54,10 @@ public class Entity {
         return this.position;
     }
 
+    public void setHealth(double health) {
+        this.health = health;
+    }
+
     public double getHealth() {
         return this.health;
     }
