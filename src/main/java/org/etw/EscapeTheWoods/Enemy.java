@@ -6,14 +6,14 @@ public class Enemy extends Entity {
     public Enemy(double health, double stamina, int damage, int speed) {
         super(health, stamina, damage, speed);
     }
-    
+
     public boolean retreat() {
         
         return false;
     }
 
-    public int specialAttack() {
-    
-        return 0;
+    public void specialAttack() {
+        
+        
     }
 }
