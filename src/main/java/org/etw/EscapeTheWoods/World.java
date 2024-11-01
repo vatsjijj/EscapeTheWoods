@@ -12,4 +12,8 @@ public class World {
         this.weather = weather;
         this.worldTemp = worldTemp;
     }
+
+    public void checkRoom(){
+        //to do
+    }
 }
