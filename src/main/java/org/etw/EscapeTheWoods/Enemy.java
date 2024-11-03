@@ -3,13 +3,29 @@ package org.etw.EscapeTheWoods;
 
 import java.util.Random;
 
+/**
+ * Class: Enemy 
+ * @author Brandon
+ * @version 1.0
+ * Course: CSE 201 Spring 2024
+ * Written: October 31, 2024
+ * 
+ * Purpose: This class represents an enemy the player has 
+ * a chance of fighting. To be used in the Bear room and
+ * the abandoned cabin room.
+ */
 public class Enemy extends Entity {
 
     public Enemy(double health, double stamina, int damage, int speed) {
         super(health, stamina, damage, speed);
     }
 
-    // Enemy has a 20% chance to retreat at half health
+    /**
+     * If the enemy's health is below or equal to half, 
+     * they have a 20% chance of retreating, ending the battle.
+     * 
+     * @return true if retreat was sucessful, false if not
+     */
     public boolean retreat() {
         double health = getHealth();
         if (health <= health / 2) {
@@ -22,7 +38,18 @@ public class Enemy extends Entity {
         return false;
     }
 
-    public void specialAttack() {
-        
+    /**
+     * The enemy has a 10% chance of doing a special attack.
+     * For now, it's just a more damaging attack.
+     * 
+     * @return 
+     */
+    public boolean specialAttack(Entity entity) {
+        Random rand = new Random();
+        int rand_int = rand.nextInt(100);
+        if (rand_int >= 90) {
+            return entity.takeDamage(50);
+        }
+        return false;
     }
 }
