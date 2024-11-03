@@ -31,5 +31,8 @@ public class World {
      */
     public void help() {
         System.out.println("List of commands: ");
+        System.out.println("Note: NONE OF THESE WORK YET!");
+        System.out.println("inventory: check your inventory");
+        System.out.println("stats: check your stats");
     }
 }
