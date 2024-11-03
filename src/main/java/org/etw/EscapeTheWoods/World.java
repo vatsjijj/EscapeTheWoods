@@ -13,7 +13,15 @@ public class World {
         this.worldTemp = worldTemp;
     }
 
+
     public void checkRoom(){
         //to do
+    }
+
+    /**
+     * This method provides a list of commands to the user when asked
+     */
+    public void help() {
+        System.out.println("List of commands: ");
     }
 }
