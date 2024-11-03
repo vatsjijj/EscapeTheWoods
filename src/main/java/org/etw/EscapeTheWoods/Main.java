@@ -14,6 +14,10 @@ public class Main {
         System.out.println("Type help for a list of commands.");
         System.out.println("Would you like to start the game? [Y]/[N]");
         
+        // Create the world and player
+        World world = new World(1000, "Sunny", 80);
+        Player player = new Player();
+
         Scanner userChoice = new Scanner(System.in);
         String yesOrNo = userChoice.nextLine();
         switch(yesOrNo) {
@@ -23,8 +27,11 @@ public class Main {
             case "N":
 
                 break;
+            case "help":
+                world.help();
+                break;
             default:
-                
+                System.out.println("Invalid input.");
                 break;
         }
 
