@@ -16,6 +16,13 @@ import java.util.Random;
  */
 public class Enemy extends Entity {
 
+    /**
+     * Constructor 
+     * @param health
+     * @param stamina
+     * @param damage
+     * @param speed
+     */
     public Enemy(double health, double stamina, int damage, int speed) {
         super(health, stamina, damage, speed);
     }
@@ -42,7 +49,7 @@ public class Enemy extends Entity {
      * The enemy has a 10% chance of doing a special attack.
      * For now, it's just a more damaging attack.
      * 
-     * @return 
+     * @return True if the special attack goes through, false if not
      */
     public boolean specialAttack(Entity entity) {
         Random rand = new Random();
