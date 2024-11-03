@@ -7,15 +7,23 @@ public class World {
     private String weather;
     private int worldTemp;
 
+    /**
+     * Constructor
+     * @param time
+     * @param weather
+     * @param worldTemp
+     */
     public World(int time, String weather, int worldTemp){
         this.time = time;
         this.weather = weather;
         this.worldTemp = worldTemp;
     }
 
-
-    public void checkRoom(){
-        //to do
+    /**
+     * Determines the room based on its name
+     */
+    public void checkRoom(Room room){
+        
     }
 
     /**

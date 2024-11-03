@@ -15,15 +15,17 @@ public class Room {
     // attributes
     private double difficulty;
     private String description;
+    private String roomName;
 
     /**
      * Room Constructor
      * @param difficulty
      * @param description
      */
-    public Room(double difficulty,String description){
+    public Room(double difficulty,String description, String roomName){
         this.difficulty = difficulty;
         this.description = description;
+        this.roomName = roomName;
     }
 
 } // end of class
