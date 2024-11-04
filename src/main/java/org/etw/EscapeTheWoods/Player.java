@@ -71,7 +71,7 @@ public void drinkWater(Water water) {
     if (water.causesSickness()) {
         System.out.println("You feel sick after drinking the water.");
         this.isSick = true;
-        this.stamina -= 10; // example effect 
+       // this.stamina -= 10; // example effect 
     } else {
         System.out.println("you feel refreshed");
         this.isSick = false;
