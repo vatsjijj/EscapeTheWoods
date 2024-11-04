@@ -1,3 +1,4 @@
+package org.etw.EscapeTheWoods;
 /**
  * Class: Water
  * Represents different qualities of water in the game.
