@@ -55,7 +55,7 @@ public class Player extends Entity implements Serializable {
     public int getScore() {
         return this.score;
     }
-}
+
 
 /**
 *Allows the player to drink water and checks if it causes sickness.
