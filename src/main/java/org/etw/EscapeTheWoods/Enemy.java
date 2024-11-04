@@ -5,7 +5,7 @@ import java.util.Random;
 
 /**
  * Class: Enemy 
- * @author Brandon
+ * @author Brandon Belfiore
  * @version 1.0
  * Course: CSE 201 Spring 2024
  * Written: October 31, 2024

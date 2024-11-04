@@ -4,6 +4,7 @@ package org.etw.EscapeTheWoods;
  * A class representing an Entity in 
  * Escape the Woods. An entity could be
  * a player, or an enemy.
+ * 
  */
 public class Entity {
     private double health;
