@@ -1,6 +1,10 @@
 package org.etw.EscapeTheWoods;
 
-// Hello 
+/**
+ * A class representing an Entity in 
+ * Escape the Woods. An entity could be
+ * a player, or an enemy.
+ */
 public class Entity {
     private double health;
     private double stamina;
@@ -8,6 +12,13 @@ public class Entity {
     private int speed;
     private Room position;
 
+    /**
+     * Constructor 1
+     * @param health
+     * @param stamina
+     * @param damage
+     * @param speed
+     */
     public Entity(double health, double stamina, int damage, int speed) {
         this.health = health;
         this.stamina = stamina;
@@ -15,6 +26,14 @@ public class Entity {
         this.speed = speed;
     }
 
+    /**
+     * Constructor 2
+     * @param health
+     * @param stamina
+     * @param damage
+     * @param speed
+     * @param position
+     */
     public Entity(
         double health,
         double stamina,
@@ -29,10 +48,20 @@ public class Entity {
         this.position = position;
     }
 
+    /**
+     * Allows the entity to attack another entity
+     * @param entity
+     * @return if the attack went through
+     */
     public boolean attack(Entity entity) {
         return entity.takeDamage(damage);
     }
 
+    /**
+     * The entity takes damage, decreasing its health
+     * @param amount
+     * @return true, will always take damage when called
+     */
     public boolean takeDamage(int amount) {
         // This needs to have a random chance but
         // for now we'll pretend that it always
@@ -41,6 +70,10 @@ public class Entity {
         return true;
     }
 
+    /**
+     * Sets an entities health to zero
+     * @return true, will always set to zero
+     */
     public boolean die() {
         this.health = 0;
         return true;
@@ -66,6 +99,11 @@ public class Entity {
         return this.stamina;
     }
 
+    /**
+     * Checks if an entity is dead
+     * @return true if health is less 
+     * than or equal to zero.
+     */
     public boolean isDead() {
         return this.health <= 0.0;
     }
