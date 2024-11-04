@@ -5,6 +5,7 @@ package org.etw.EscapeTheWoods;
  * Escape the Woods. An entity could be
  * a player, or an enemy.
  * 
+ * @author Brandon Belfiore
  */
 public class Entity {
     private double health;
