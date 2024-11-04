@@ -1,11 +1,15 @@
 package org.etw.EscapeTheWoods;
 
 /**
- * A class representing the world of the game.
+ * Class: World
+ * @author Brandon Belfiore
+ * @version 1.0
+ * Course: CSE 201 Spring 2024
+ * Written: October 31, 2024
+ * 
+ * Purpose: A class representing the world of the game.
  * It features the time, weather, and temperature
  * of the world.
- * 
- * @author Brandon Belfiore
  */
 public class World {
     private int time;
