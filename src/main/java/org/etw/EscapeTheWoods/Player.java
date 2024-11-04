@@ -68,13 +68,13 @@ public void drinkWater(Water water) {
     System.out.println("You drank " + water.getQuality() + " qaulity water.");
     this.thirst = Math.max(thirst - 20, 0);
 
-if (water.causesSickness()) {
-    System.out.println("You feel sick after drinking the water.");
-    this.isSick = true;
-    this.stamina -= 10; // example effect 
-} else {
-    System.out.println("you feel refreshed");
-    this.isSick = false;
+    if (water.causesSickness()) {
+        System.out.println("You feel sick after drinking the water.");
+        this.isSick = true;
+        this.stamina -= 10; // example effect 
+    } else {
+        System.out.println("you feel refreshed");
+        this.isSick = false;
     }
 }
 
