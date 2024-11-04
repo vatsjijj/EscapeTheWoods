@@ -3,6 +3,13 @@ package org.etw.EscapeTheWoods;
 import java.util.Scanner;
 
 /**
+ * Class: Main 
+ * @author Brandon Belfiore
+ * @version 1.0
+ * Course: CSE 201 Spring 2024
+ * Written: October 31, 2024
+ * 
+ * Purpose:
  * The Main Method of the Escape The Woods game.
  * This is where the code will run.
  * Right now it just tests the classes and has 
