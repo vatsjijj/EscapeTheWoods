@@ -79,22 +79,42 @@ public class Entity {
         return true;
     }
 
+    /**
+     * Setter for position
+     * @param position
+     */
     public void setPosition(Room position) {
         this.position = position;
     }
 
+    /**
+     * Getter for position
+     * @return the position
+     */
     public Room getPosition() {
         return this.position;
     }
 
+    /**
+     * Setter for health
+     * @param health
+     */
     public void setHealth(double health) {
         this.health = health;
     }
 
+    /**
+     * Getter for health
+     * @return the health 
+     */
     public double getHealth() {
         return this.health;
     }
 
+    /**
+     * Getter for stamina 
+     * @return the stamina
+     */
     public double getStamina() {
         return this.stamina;
     }
