@@ -32,11 +32,20 @@ public class Player extends Entity implements Serializable {
         return true;
     }
 
+    /**
+     * Allows the player entity to drink a "food" item.
+     * @param drink The item to consume.
+     * @return True if the "food" was drank, false otherwise.
+     */
     public boolean drink(Food drink) {
         // Need to expand on the Food class.
         return true;
     }
 
+    /**
+     * Adds an item to the player inventory.
+     * @param item The item to be added to the inventory.
+     */
     public void addItem(Item item) {
         inventory.add(item);
     }
@@ -68,7 +77,6 @@ public class Player extends Entity implements Serializable {
     *
     *@param water The water object being consumed
     */
-
     public void drinkWater(Water water) {
         System.out.println("You drank " + water.getQuality() + " qaulity water.");
         this.thirst = Math.max(thirst - 20, 0);
