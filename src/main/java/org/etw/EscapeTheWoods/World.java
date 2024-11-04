@@ -1,7 +1,12 @@
-// Your VSCode is definitely set up incorrectly, we'll have to fix
-// it later. It should be `org.etw.EscapeTheWoods`.
 package org.etw.EscapeTheWoods;
 
+/**
+ * A class representing the world of the game.
+ * It features the time, weather, and temperature
+ * of the world.
+ * 
+ * @author Brandon Belfiore
+ */
 public class World {
     private int time;
     private String weather;
