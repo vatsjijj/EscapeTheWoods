@@ -1,11 +1,15 @@
 package org.etw.EscapeTheWoods;
 
 /**
- * A class representing an Entity in 
+ * Class: Entity 
+ * @author Brandon Belfiore
+ * @version 1.0
+ * Course: CSE 201 Spring 2024
+ * Written: October 31, 2024
+ * 
+ * Purpose: A class representing an Entity in 
  * Escape the Woods. An entity could be
  * a player, or an enemy.
- * 
- * @author Brandon Belfiore
  */
 public class Entity {
     private double health;
