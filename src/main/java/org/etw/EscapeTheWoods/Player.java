@@ -22,6 +22,11 @@ public class Player extends Entity implements Serializable {
         this.isSick = false;
     }
 
+    /**
+     * Allows the player entity to eat a food item.
+     * @param food The food to be eaten.
+     * @return True if the food was eaten, false otherwise.
+     */
     public boolean eat(Food food) {
         // Need to expand on the Food class.
         return true;
