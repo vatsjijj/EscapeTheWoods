@@ -82,7 +82,7 @@ public void drinkWater(Water water) {
 *@return true if player is sick, false if not,
 */
 public boolean isSick() {
-    return thisisSick;
+    return this.isSick;
 }
 
  /**
