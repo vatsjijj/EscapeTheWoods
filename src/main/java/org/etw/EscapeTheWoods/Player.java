@@ -1,4 +1,14 @@
 package org.etw.EscapeTheWoods;
+/**
+ * Class: Player
+ * @author Aidan
+ * @version 1.0
+ * Course: CSE 201 Spring 2024
+ * Written: October 31, 2024
+ * 
+ * Purpose: A class representing an Player in 
+ * Escape the Woods. 
+ */
 
 import java.util.ArrayList;
 import java.io.Serializable;
