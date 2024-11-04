@@ -50,22 +50,42 @@ public class Player extends Entity implements Serializable {
         inventory.add(item);
     }
 
+    /**
+     * A getter for the temperature of the player.
+     * @return The temperature of the player.
+     */
     public double getTemperature() {
         return this.temperature;
     }
 
+    /**
+     * A getter for the hunger of the player.
+     * @return The hunger of the player.
+     */
     public double getHunger() {
         return this.hunger;
     }
 
+    /**
+     * A getter for the thirst of the player.
+     * @return The thirst of the player.
+     */
     public double getThirst() {
         return this.thirst;
     }
 
+    /**
+     * A getter for the inventory of the player.
+     * @return The inventory of the player.
+     */
     public ArrayList<Item> getInventory() {
         return this.inventory;
     }
 
+    /**
+     * A getter for the score of the player.
+     * @return The score of the player.
+     */
     public int getScore() {
         return this.score;
     }
