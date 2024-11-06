@@ -1,6 +1,6 @@
 /**
  * Class: Item
- * @author Sydney McGreal
+ * @author Gerry Bennett
  * @version 1.0
  * Course: CSE 201 Spring 2024
  * Written: October 31, 2024
