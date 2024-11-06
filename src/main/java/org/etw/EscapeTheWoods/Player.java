@@ -13,7 +13,6 @@ public class Player extends Entity implements Serializable {
     private double thirst;
     private double hunger;
     private int score;
-    private boolean isSick;
 
     
     public Player() {
@@ -23,7 +22,6 @@ public class Player extends Entity implements Serializable {
         this.thirst = 0;
         this.hunger = 0;
         this.score = 0;
-        this.isSick = false;
     }
 
     /**
