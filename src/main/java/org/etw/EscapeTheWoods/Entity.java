@@ -131,6 +131,14 @@ public class Entity {
     }
 
     /**
+     * Getter for speed
+     * @return
+     */
+    public int getSpeed() {
+        return this.speed;
+    }
+
+    /**
      * Checks if an entity is dead
      * @return true if health is less 
      * than or equal to zero.
