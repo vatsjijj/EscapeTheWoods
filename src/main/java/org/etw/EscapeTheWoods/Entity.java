@@ -76,6 +76,11 @@ public class Entity {
         return true;
     }
 
+    public int getDamage(){
+        return this.damage;
+    }
+
+
     /**
      * Sets an entities health to zero
      * @return true, will always set to zero
