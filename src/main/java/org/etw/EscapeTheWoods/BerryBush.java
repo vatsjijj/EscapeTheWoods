@@ -11,6 +11,8 @@
 
 package org.etw.EscapeTheWoods;
 
+import java.util.Random;
+
 public class BerryBush extends Room {
     
     // Constructor
@@ -20,20 +22,22 @@ public class BerryBush extends Room {
 
     public String determineColor() {
         String color;
-        int option = (int) Math.random();
+        Random rand = new Random();
+        int option = rand.nextInt(3);
         switch(option) {
             case 1:
-            color = "red";
-            return color;
+                color = "red";
+                return color;
             case 2:
-            color = "blue";
-            return color;
+                color = "blue";
+                return color;
             case 3:
-            color = "white";
-            return color;
+                color = "white";
+                return color;
             default:
-
+                break;
         }
+
     }
 
 }
