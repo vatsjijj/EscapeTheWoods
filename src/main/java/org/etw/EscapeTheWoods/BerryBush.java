@@ -40,5 +40,13 @@ public class BerryBush extends Room {
 
         return color;
     }
+    public boolean isEdible(){
+        if (determineColor().equalsIgnoreCase("red") || determineColor().equalsIgnoreCase("blue") ) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
 }
