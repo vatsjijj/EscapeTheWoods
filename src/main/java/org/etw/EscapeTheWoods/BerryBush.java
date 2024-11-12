@@ -21,7 +21,7 @@ public class BerryBush extends Room {
     }
 
     public String determineColor() {
-        String color = null;
+        String color = "";
         Random rand = new Random();
         int option = rand.nextInt(3);
         switch(option) {
