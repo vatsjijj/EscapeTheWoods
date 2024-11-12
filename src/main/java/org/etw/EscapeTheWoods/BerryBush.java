@@ -33,6 +33,7 @@ public class BerryBush extends Room {
                 break;
             case 3:
                 color = "white";
+                break;
             default:
                 break;
         }
