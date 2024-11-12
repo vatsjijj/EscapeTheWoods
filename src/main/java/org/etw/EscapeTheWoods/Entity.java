@@ -76,6 +76,11 @@ public class Entity {
         return true;
     }
 
+    public int getDamage(){
+        return this.damage;
+    }
+
+
     /**
      * Sets an entities health to zero
      * @return true, will always set to zero
@@ -123,6 +128,14 @@ public class Entity {
      */
     public double getStamina() {
         return this.stamina;
+    }
+
+    /**
+     * Getter for speed
+     * @return
+     */
+    public int getSpeed() {
+        return this.speed;
     }
 
     /**
