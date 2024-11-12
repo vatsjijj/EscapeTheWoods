@@ -21,23 +21,23 @@ public class BerryBush extends Room {
     }
 
     public String determineColor() {
-        String color;
+        String color = null;
         Random rand = new Random();
         int option = rand.nextInt(3);
         switch(option) {
             case 1:
                 color = "red";
-                return color;
+                break;
             case 2:
                 color = "blue";
-                return color;
+                break;
             case 3:
                 color = "white";
-                return color;
             default:
                 break;
         }
 
+        return color;
     }
 
 }
