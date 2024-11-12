@@ -29,4 +29,16 @@ public class Item {
         this.rarity = rarity;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
+    public String getDescription(){
+        return this.description;
+    }
+
+    public int rarity(){
+        return this.rarity;
+    }
+
 } //end of class
