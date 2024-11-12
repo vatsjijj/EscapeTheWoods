@@ -13,6 +13,7 @@ public class Food extends Item{
     //attribute
     private int quantity;
 
+    //fish food item?
 
     /**
      * Food Constructor
