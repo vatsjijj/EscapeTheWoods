@@ -26,4 +26,13 @@ public class Food extends Item{
         this.quantity = quantity;
     }
 
+    /*
+     * Get quantity method
+     * 
+     * @return quantity
+     */
+    public int getQuanity(){
+        return this.quantity;
+    }
+
 }
