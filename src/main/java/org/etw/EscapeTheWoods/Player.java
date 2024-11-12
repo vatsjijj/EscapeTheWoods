@@ -24,7 +24,7 @@ public class Player extends Entity implements Serializable {
     private double hunger;
     private int score;
 
-    
+    //Constructor
     public Player() {
         super(100, 100, 1, 10);
         this.inventory = new ArrayList<>();
