@@ -8,6 +8,7 @@
  * Purpose: A room where the player finds a lake, and can choose whether to explore the area, fish, or leave.
  */
 package org.etw.EscapeTheWoods;
+import java.util.Random;
 
 public class Lake extends Room {
 
@@ -16,5 +17,19 @@ public class Lake extends Room {
         super(1, "You have found a lake.", "Lake");
     }
 
-    
+    //public exploreLake(){ 
+        
+    //}
+
+    public boolean catchFish(){
+        Random rand = new Random();
+        int rand_int = rand.nextInt(100);
+        if (rand_int >= 40){
+            //Player does not catch fish
+            return false;
+        } else {
+            //Player catches fish
+            return true;
+        }
+    }
 }
