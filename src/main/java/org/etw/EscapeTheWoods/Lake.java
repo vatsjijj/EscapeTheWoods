@@ -19,7 +19,15 @@ public class Lake extends Room {
     }
 
     public void exploreLake(Scanner choice){ 
+        String userChoice = "";
         System.out.println("Would you like to fish or explore?");
+        userChoice = choice.nextLine();
+        if (userChoice.equalsIgnoreCase("fish")) {
+            catchFish();
+        } else if (userChoice.equalsIgnoreCase("fish")) {
+            // To be Implemented 
+        }
+        
         
     }
 
