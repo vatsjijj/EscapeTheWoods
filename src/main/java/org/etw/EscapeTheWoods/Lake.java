@@ -18,7 +18,7 @@ public class Lake extends Room {
         super(1, "You have found a lake.", "Lake");
     }
 
-    public void exploreLake(Scanner choice){ 
+    public void askPlayer(Scanner choice){ 
         String userChoice = "";
         System.out.println("Would you like to fish or explore?");
         userChoice = choice.nextLine();
@@ -26,6 +26,7 @@ public class Lake extends Room {
             catchFish();
         } else if (userChoice.equalsIgnoreCase("explore")) {
             // To be Implemented 
+            exploreLake();
         }
     }
 
@@ -39,5 +40,30 @@ public class Lake extends Room {
             //Player catches fish
             return true;
         }
+    }
+
+    public void exploreLake() {
+        
+    }
+}
+
+/**
+ * Method to simulate searching for an item.
+ * The probability of finding an item is determined by a random number,
+ * with a 30% chance of finding an item and a 70% chance of not finding one.
+ * This algorithm is based on a random number generation and conditional logic.
+ *
+ * @return boolean indicating whether the player found an item (true) or not (false)
+ */
+public boolean searchForItem() {
+    random rand = new Random();
+    int rand_int = rand.nextint(100);
+    return rand_int < 30;
+    if (rand_int < 30) {
+        // Player finds an item
+        return true;
+    } else {
+        // Player does not find an item
+        return false;
     }
 }
