@@ -33,15 +33,6 @@ public class BerryBush extends Room {
         Random rand = new Random();
         int option = rand.nextInt(3);
         switch(option) {
-<<<<<<< HEAD
-            case 0:
-                color = "red";
-                break;
-            case 1:
-                color = "blue";
-                break;
-            case 2:
-=======
             case 1:
                 // safe gives more than blue though
                 color = "red";
@@ -52,7 +43,6 @@ public class BerryBush extends Room {
                 break;
             case 3:
                 // isn't safe
->>>>>>> origin/main
                 color = "white";
                 break;
             default:
