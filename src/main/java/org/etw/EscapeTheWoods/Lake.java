@@ -45,7 +45,6 @@ public class Lake extends Room {
     public void exploreLake() {
         
     }
-}
 
 /**
  * Method to simulate searching for an item.
@@ -55,15 +54,15 @@ public class Lake extends Room {
  *
  * @return boolean indicating whether the player found an item (true) or not (false)
  */
-public boolean searchForItem() {
-    Random rand = new Random();
-    int rand_int = rand.nextInt(100);
-    return rand_int < 30;
-    if (rand_int < 30) {
+    public boolean searchForItem() {
+        Random rand = new Random();
+        int rand_int = rand.nextInt(100);
+        if (rand_int < 30) {
         // Player finds an item
-        return true;
-    } else {
+            return true;
+        }else {
         // Player does not find an item
-        return false;
-    }
+            return false;
+        }
+    }    
 }
