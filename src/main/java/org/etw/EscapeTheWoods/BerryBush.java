@@ -22,7 +22,8 @@ public class BerryBush extends Room {
 
     /**
      * Method that determines the color of berries
-     * which effects if the berries are safe to eat or not
+     * which effects if the berries are safe to eat or not,
+     * isEdible() method
      * 
      * 
      * @return color;
@@ -51,6 +52,11 @@ public class BerryBush extends Room {
         return color;
     }
 
+    /**
+     * Method that returns if the berries are edible or not
+     * 
+     * @return boolean isEdible()
+     */
     public boolean isEdible(){
         if (determineColor().equalsIgnoreCase("red") || determineColor().equalsIgnoreCase("blue") ) {
             return true;
