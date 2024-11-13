@@ -18,7 +18,7 @@ public class Lake extends Room {
         super(1, "You have found a lake.", "Lake");
     }
 
-    public void exploreLake(Scanner choice){ 
+    public void askPlayer(Scanner choice){ 
         String userChoice = "";
         System.out.println("Would you like to fish or explore?");
         userChoice = choice.nextLine();
@@ -26,6 +26,7 @@ public class Lake extends Room {
             catchFish();
         } else if (userChoice.equalsIgnoreCase("explore")) {
             // To be Implemented 
+            exploreLake();
         }
     }
 
@@ -39,5 +40,9 @@ public class Lake extends Room {
             //Player catches fish
             return true;
         }
+    }
+
+    public void exploreLake() {
+        
     }
 }
