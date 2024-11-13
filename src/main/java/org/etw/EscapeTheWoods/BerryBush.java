@@ -25,13 +25,13 @@ public class BerryBush extends Room {
         Random rand = new Random();
         int option = rand.nextInt(3);
         switch(option) {
-            case 1:
+            case 0:
                 color = "red";
                 break;
-            case 2:
+            case 1:
                 color = "blue";
                 break;
-            case 3:
+            case 2:
                 color = "white";
                 break;
             default:
