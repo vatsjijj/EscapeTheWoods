@@ -10,11 +10,21 @@ public class Cabin extends Room {
 
     //public boolean exploreCabinPlayer(Scanner choice)
 
-    //public boolean enemyEncounter()
+    public boolean enemyEncounter(){
+        Random rand = new Random();
+        int rand_int = rand.nextInt(100);
+        if (rand_int >= 70){
+            //Player does not encounter an enemy
+            return false;
+        } else {
+            //Player does encounter an enemy
+            return true;
+        }
+    }
 
-    //public boolean itemFind ()
+    //public boolean itemFind()
 
-    //
+    
 
 
 
