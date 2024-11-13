@@ -11,4 +11,19 @@ public final class Token {
         this.span[0] = start;
         this.span[1] = end;
     }
+
+    public String toString() {
+        var builder = new StringBuilder();
+
+        builder.append("Type: ");
+        builder.append(switch (type) {
+            case YES -> "YES; ";
+            case NO  -> "NO; ";
+            case EOI -> "EOI; ";
+        });
+        builder.append("Content: ");
+        builder.append(content + " ");
+
+        return builder.toString();
+    }
 }
