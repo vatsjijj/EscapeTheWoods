@@ -46,3 +46,24 @@ public class Lake extends Room {
         
     }
 }
+
+/**
+ * Method to simulate searching for an item.
+ * The probability of finding an item is determined by a random number,
+ * with a 30% chance of finding an item and a 70% chance of not finding one.
+ * This algorithm is based on a random number generation and conditional logic.
+ *
+ * @return boolean indicating whether the player found an item (true) or not (false)
+ */
+public boolean searchForItem() {
+    Random rand = new Random();
+    int rand_int = rand.nextInt(100);
+    return rand_int < 30;
+    if (rand_int < 30) {
+        // Player finds an item
+        return true;
+    } else {
+        // Player does not find an item
+        return false;
+    }
+}

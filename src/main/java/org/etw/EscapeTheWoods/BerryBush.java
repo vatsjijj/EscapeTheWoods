@@ -20,11 +20,20 @@ public class BerryBush extends Room {
         super(1, "You have found a berry bush.", "Berry Bush");
     }
 
+    /**
+     * Method that determines the color of berries
+     * which effects if the berries are safe to eat or not,
+     * isEdible() method
+     * 
+     * 
+     * @return color;
+     */
     public String determineColor() {
         String color = "";
         Random rand = new Random();
         int option = rand.nextInt(3);
         switch(option) {
+<<<<<<< HEAD
             case 0:
                 color = "red";
                 break;
@@ -32,6 +41,18 @@ public class BerryBush extends Room {
                 color = "blue";
                 break;
             case 2:
+=======
+            case 1:
+                // safe gives more than blue though
+                color = "red";
+                break;
+            case 2:
+                // safe
+                color = "blue";
+                break;
+            case 3:
+                // isn't safe
+>>>>>>> origin/main
                 color = "white";
                 break;
             default:
@@ -41,6 +62,11 @@ public class BerryBush extends Room {
         return color;
     }
 
+    /**
+     * Method that returns if the berries are edible or not
+     * 
+     * @return boolean isEdible()
+     */
     public boolean isEdible(){
         if (determineColor().equalsIgnoreCase("red") || determineColor().equalsIgnoreCase("blue") ) {
             return true;
