@@ -56,8 +56,8 @@ public class Lake extends Room {
  * @return boolean indicating whether the player found an item (true) or not (false)
  */
 public boolean searchForItem() {
-    random rand = new Random();
-    int rand_int = rand.nextint(100);
+    Random rand = new Random();
+    int rand_int = rand.nextInt(100);
     return rand_int < 30;
     if (rand_int < 30) {
         // Player finds an item
