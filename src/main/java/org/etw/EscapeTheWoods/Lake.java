@@ -24,11 +24,9 @@ public class Lake extends Room {
         userChoice = choice.nextLine();
         if (userChoice.equalsIgnoreCase("fish")) {
             catchFish();
-        } else if (userChoice.equalsIgnoreCase("fish")) {
+        } else if (userChoice.equalsIgnoreCase("explore")) {
             // To be Implemented 
         }
-        
-        
     }
 
     public boolean catchFish(){
