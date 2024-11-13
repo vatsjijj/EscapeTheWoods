@@ -9,6 +9,7 @@
  */
 package org.etw.EscapeTheWoods;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Lake extends Room {
 
@@ -17,9 +18,10 @@ public class Lake extends Room {
         super(1, "You have found a lake.", "Lake");
     }
 
-    //public exploreLake(){ 
+    public void exploreLake(Scanner choice){ 
+        System.out.println("Would you like to fish or explore?");
         
-    //}
+    }
 
     public boolean catchFish(){
         Random rand = new Random();
