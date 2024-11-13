@@ -25,6 +25,11 @@ public class Tokenizer {
                 builder.toString(),
                 start, end
             );
+            case "h", "help" -> new Token(
+                TokenType.HELP,
+                builder.toString(),
+                start, end
+            );
             default         -> throw new IllegalArgumentException("How did you get here?");
         };
     }

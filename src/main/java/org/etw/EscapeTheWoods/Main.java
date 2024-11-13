@@ -26,21 +26,17 @@ public class Main {
         Player player = new Player();
 
         Scanner userChoice = new Scanner(System.in);
-        String yesOrNo = userChoice.nextLine();
-        switch(yesOrNo) {
-            case "Y":
+        var answer = userChoice.nextLine() + '\n';
+        var tk = new Tokenizer(answer);
+        var toks = tk.tokenize();
+        var result = Evaluate.eval(toks);
 
-                break;
-            case "N":
-
-                break;
-            case "help":
-                world.help();
-                break;
-            default:
-                System.out.println("Invalid input.");
-                break;
-        }
+        System.out.println(switch (result) {
+            case ProgramResult.Yes x   -> "Yes";
+            case ProgramResult.No x    -> "No";
+            case ProgramResult.Help x  -> world.help();
+            case ProgramResult.Error x -> x.msg();
+        });
 
         userChoice.close();
     }

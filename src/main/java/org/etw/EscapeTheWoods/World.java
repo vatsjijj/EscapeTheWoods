@@ -38,10 +38,13 @@ public class World {
     /**
      * This method provides a list of commands to the user when asked
      */
-    public void help() {
-        System.out.println("List of commands: ");
-        System.out.println("Note: NONE OF THESE WORK YET!");
-        System.out.println("inventory: check your inventory");
-        System.out.println("stats: check your stats");
+    public String help() {
+        var sb = new StringBuilder();
+        sb.append("List of commands:\n");
+        sb.append("Note: ONLY SOME OF THESE WORK!\n");
+        sb.append("help: display this message\n");
+        sb.append("inventory: check your inventory\n");
+        sb.append("stats: check your stats");
+        return sb.toString();
     }
 }
