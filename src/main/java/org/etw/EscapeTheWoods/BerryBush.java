@@ -20,6 +20,7 @@ public class BerryBush extends Room {
         super(1, "You have found a berry bush.", "Berry Bush");
     }
 
+    
     public String determineColor() {
         String color = "";
         Random rand = new Random();
