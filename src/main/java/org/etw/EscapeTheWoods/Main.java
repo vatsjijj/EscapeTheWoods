@@ -25,12 +25,13 @@ public class Main {
         World world = new World(1000, "Sunny", 80);
         Player player = new Player();
 
+        // Create scanner
         Scanner userChoice = new Scanner(System.in);
+        // answer is the nextLine
         var answer = userChoice.nextLine() + '\n';
         var tk = new Tokenizer(answer);
         var toks = tk.tokenize();
         var result = Evaluate.eval(toks);
-
         System.out.println(switch (result) {
             case ProgramResult.Yes x   -> "Yes";
             case ProgramResult.No x    -> "No";
@@ -38,6 +39,7 @@ public class Main {
             case ProgramResult.Error x -> x.msg();
         });
 
+        //close scanner
         userChoice.close();
     }
-}
+} //end of main
