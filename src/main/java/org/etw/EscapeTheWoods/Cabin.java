@@ -22,11 +22,22 @@ public class Cabin extends Room {
         }
     }
 
-    //public boolean itemFind()
+   /**
+     * Player looks around the lake for potential items.
+     * There is a 20% chance of finding an item.
+     * @return false if they don't find an item, true if they do
+     */
+    public boolean itemFind() {
+        Random rand = new Random();
+        int rand_int = rand.nextInt(100);
+        if (rand_int >= 20) {
+            // Player does not find item
+            return false;
+        } else {
+            // Player finds item
+            return true;
+        }
+    }
 
     
-
-
-
-
 }

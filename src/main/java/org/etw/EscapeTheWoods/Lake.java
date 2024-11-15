@@ -18,12 +18,6 @@ public class Lake extends Room {
         super(1, "You have found a lake.", "Lake");
     }
 
-    /**
-     * give player a choice
-     * 
-     * @param choice
-     * 
-     */ 
     public void askPlayer(Scanner choice){ 
         String userChoice = "";
         System.out.println("Would you like to fish or explore?");
@@ -36,11 +30,6 @@ public class Lake extends Room {
         }
     }
 
-    /*
-     * catchFish method
-     * 
-     * @return boolean fish
-     */
     public boolean catchFish(){
         Random rand = new Random();
         int rand_int = rand.nextInt(100);
@@ -53,11 +42,6 @@ public class Lake extends Room {
         }
     }
 
-    /*
-     * exploreLake method
-     * 
-     * @return boolean item
-     */
     public boolean exploreLake() {
         Random rand = new Random();
         int rand_int = rand.nextInt(100);
