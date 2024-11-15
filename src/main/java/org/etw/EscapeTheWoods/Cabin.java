@@ -39,5 +39,11 @@ public class Cabin extends Room {
         }
     }
 
-    
+    /**
+     * Battle system. The player will enage in combat with a
+     * random enemy. Player can either attempt to retreat, or
+     * fight back against the attack. The fight ends when
+     * either the enemy dies, or the player dies.
+     */
+    // public void battle()
 }
