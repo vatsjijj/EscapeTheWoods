@@ -23,10 +23,4 @@ public class Cabin extends Room {
     }
 
     //public boolean itemFind()
-
-    
-
-
-
-
 }

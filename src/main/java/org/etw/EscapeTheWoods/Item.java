@@ -29,6 +29,22 @@ public class Item {
         this.rarity = rarity;
     }
 
+    public static Item redBerry(){
+        return new Item("Berry", "Safe to eat", 1 );
+    }
+
+    public static Item whiteBerry(){
+        return new Item("White Berry", "Not safe to eat", 1);
+    }
+
+    public static Item blueBerry(){
+        return new Item("Blue Berry", "Safe to eat", 2);
+    }
+
+    public static Item catFish(){
+        return new Item("Cat Fish", "Common Fish", 1);
+    }
+
     public String getName(){
         return this.name;
     }
