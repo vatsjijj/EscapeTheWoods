@@ -18,6 +18,11 @@ public class Lake extends Room {
         super(1, "You have found a lake.", "Lake");
     }
 
+    /**
+     * Method that gives the player the choice to 
+     * either fish or explore.
+     * @param choice A scanner than takes the user's input
+     */
     public void askPlayer(Scanner choice){ 
         String userChoice = "";
         System.out.println("Would you like to fish or explore?");
@@ -30,6 +35,11 @@ public class Lake extends Room {
         }
     }
 
+    /**
+     * Method that represents the player fishing. The player has a
+     * 40% chance of catching a fish. 
+     * @return false if they don't catch a fish, true if they do
+     */
     public boolean catchFish(){
         Random rand = new Random();
         int rand_int = rand.nextInt(100);
@@ -42,6 +52,11 @@ public class Lake extends Room {
         }
     }
 
+    /**
+     * Player looks around the lake for potential items.
+     * There is a 20% chance of finding an item.
+     * @return false if they don't find an item, true if they do
+     */
     public boolean exploreLake() {
         Random rand = new Random();
         int rand_int = rand.nextInt(100);
