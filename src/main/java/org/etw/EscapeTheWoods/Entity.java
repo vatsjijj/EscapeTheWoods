@@ -76,6 +76,10 @@ public class Entity {
         return true;
     }
 
+     /**
+     * Getter for damage
+     * @return the damage
+     */
     public int getDamage(){
         return this.damage;
     }
