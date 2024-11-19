@@ -42,10 +42,24 @@ public class ForkInPath {
             Item food = new Food("Berries", " A handful of berries.", 1, 5);
             player.addItem(food);
             playerPassed();
-        }
     } else {
         System.out.println("Invalid choice. Try again.");
         ecounterFork(scanner);
     }
+
+
+/**
+*simulates a random event with a chance of survival.
+* 
+*@return true if player survives, false otherwise.
+*/
+private boolean randomEvent() { 
+    Random rand = new Random();
+    int chance = rand.nextInt(100); 
+    return chance >= 20;
 }
+}
+}
+
+    
         
