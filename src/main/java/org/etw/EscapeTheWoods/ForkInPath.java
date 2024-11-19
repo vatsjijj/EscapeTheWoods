@@ -22,7 +22,30 @@ public class ForkInPath {
             player.setStamina(player.getStamina() - 10); 
             checkStamina();
         } else if (direction.equals("right")) { 
+            // chooses right
+            System.out.println("you chose to go right.");
+            if (player.getHunger() > 50) { 
+                System.out.println("you are feeling hungry. A random event occurs...") 
+                boolean surivived = randomEvent();
+                if (survived) {
+                    System.out.println("you survived the random event!");
+                    playerPassed();
+                } else {
+                    System.out.println("you didn't survive the random event.");
+                    playerPasswed();
+                } else {
+                    System.out.println("you didn't survive the random event.");
+                    player.setHealth(0); // death 
+            }
+        } else { 
+            System.out.println("You are not hungry. You find some food and add it to your inventory.");
+            Item food = new Food("Berries", " A handful of berries.", 1, 5);
+            player.addItem(food);
+            playerPassed();
         }
+    } else {
+        System.out.println("Invalid choice. Try again.");
+        ecounterFork(scanner);
     }
 }
         
