@@ -100,7 +100,7 @@ public class Lake extends Room {
                 leave = true;  // Exit the loop
                 break;
             default:
-                System.out.println("Ivalid Input.");
+                System.out.println("Invalid Input.");
                 break;
             }
 
