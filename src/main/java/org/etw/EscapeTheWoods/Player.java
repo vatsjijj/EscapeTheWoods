@@ -63,6 +63,23 @@ public class Player extends Entity implements Serializable {
     }
 
     /**
+    * Removes an item from the player's inventory.
+    *
+    *@param item the item to remove.
+    *@return true if the item was removed, false if otherwise.
+    */
+    public boolean removeItem(Item item) {
+        if (inventory.contains(item)) { 
+            iventory.remove(item));
+            System.out.println(item.getName() + " has been removed from your inventory.");
+            return true;
+        } else {
+            System.out.println("the item is not in your inventory.");
+            return false;
+        }
+    }
+
+    /**
      * A getter for the temperature of the player.
      * @return The temperature of the player.
      */
