@@ -82,22 +82,40 @@ public class Lake extends Room {
 
             switch (playerChoice.toLowerCase()) {
                 case "fish":
-                if (catchFish()) {
-                    System.out.println("You caught a fish!");
-                } else {
-                    System.out.println("You didn't catch anything.");
+                boolean fishAgain = true;
+                while (fishAgain){
+                    if (catchFish()) {
+                        System.out.println("You caught a fish!");
+                        System.out.println("Would you like to try again? (yes/no)");
+                    } else {
+                        System.out.println("You didn't catch anything.");
+                        System.out.println("Would you like to try again? (yes/no)");
+                    }
+                    String tryFishAgain = choice.nextLine();
+                    if (!tryFishAgain.equalsIgnoreCase("yes")){
+                        fishAgain = false;
+                    }
                 }
                 break;
             case "explore":
-                if (exploreLake()) {
-                    System.out.println("You found an item!");
-                } else {
-                    System.out.println("You didn't find anything.");
+                boolean exploreAgain = true;
+                while (exploreAgain){
+                    if (exploreLake()) {
+                        System.out.println("You found an item!");
+                        System.out.println("Would you like to keep searching? (yes/no)");
+                    } else {
+                        System.out.println("You didn't find anything.");
+                        System.out.println("Would you like to keep searching? (yes/no)");
+                    }
+                    String tryAgain = choice.nextLine();
+                    if (!tryAgain.equalsIgnoreCase("yes")){
+                        exploreAgain = false;
+                    }
                 }
                 break;
             case "leave":
                 System.out.println("You decide to leave the lake.");
-                leave = true;  // Exit the loop
+                leave = true;
                 break;
             default:
                 System.out.println("Invalid Input.");
