@@ -79,23 +79,7 @@ public class Entity {
         }
     }
 
-    /**
-    * Increases stamina by a specified amount.
-    *
-    * @param amount the amount to increase stamina by.
-    */
-    public increaseStamina(double amount) {
-        setStamina(this.stamina + amount);
-    }
-
-    /**
-    * Decreases stamina by a specified amount
-    * 
-    * @param amount the amount to decrease stamina by.
-    */
-    public decreaseStamina(double amount) {
-        setStamina(this.stamina - amount);
-    }
+ 
 
     /**
      * Allows the entity to attack another entity
