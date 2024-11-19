@@ -42,6 +42,7 @@ public class Weapons extends Item{
         return new Weapons("Slingshot", "Slingshot that launches stones", 2, 10);
     }
 
-
-
+    public int getDamage(){
+        return this.DamageMultiplyer;
+    }
 }
