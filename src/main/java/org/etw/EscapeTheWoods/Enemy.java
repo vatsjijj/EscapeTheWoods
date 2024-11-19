@@ -35,6 +35,7 @@ public class Enemy extends Entity {
         return new Enemy(100.0, 100.0, 25, 35);
     }
 
+
     /**
      * If the enemy's health is below or equal to half, 
      * they have a 20% chance of retreating, ending the battle.
