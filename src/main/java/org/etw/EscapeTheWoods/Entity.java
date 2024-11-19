@@ -17,6 +17,7 @@ public class Entity {
     private int damage;
     private int speed;
     private Room position;
+    private double stamina;
 
     /**
      * Constructor 1
@@ -52,6 +53,48 @@ public class Entity {
         this.damage = damage;
         this.speed = speed;
         this.position = position;
+    }
+
+
+    /** 
+    *getter for stamina.
+    *@return the entity's current stamina.
+    */
+    public double getStamina() {
+        return this.stamina;
+    }
+
+    /**
+    * Setter for stamina.
+    *
+    * @param stamina the value to set as the entity's stamina
+    */
+    public void setStamina(double stamina) { 
+        if (stamina < 0) {
+            this.stamina = 0;
+        } else if (stamina > 100) {
+            this.stamina = 100;
+        } else {
+            this.stamina = stamina;
+        }
+    }
+
+    /**
+    * Increases stamina by a specified amount.
+    *
+    * @param amount the amount to increase stamina by.
+    */
+    public increaseStamina(double amount) {
+        setStamina(this.stamina + amount);
+    }
+
+    /**
+    * Decreases stamina by a specified amount
+    * 
+    * @param amount the amount to decrease stamina by.
+    */
+    public decreaseStamina(double amount) {
+        setStamina(this.stamina - amount);
     }
 
     /**
