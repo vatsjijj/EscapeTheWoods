@@ -25,8 +25,4 @@ public class Weapons extends Item{
         super(name, description, rarity);
         this.DamageMultiplyer = DamageMultiplyer;
     }
-
-    public int getDamageMultiplyer(){
-        return DamageMultiplyer;
-    }
 }
