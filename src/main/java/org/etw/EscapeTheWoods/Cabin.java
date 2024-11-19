@@ -1,11 +1,18 @@
 package org.etw.EscapeTheWoods;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Cabin extends Room {
 
+    // Attributes
+    private Player player;
+    private Enemy enemy;
+
     //Constructor
-    public Cabin (double difficulty,String description, String roomName){
+    public Cabin (double difficulty,String description, String roomName, Player player, Enemy enemy){
         super(1, "You see a cabin in the distance", "Abandoned Cabin");
+        this.player = player;
+        this.enemy = enemy;
     }
 
     //public boolean exploreCabinPlayer(Scanner choice)
@@ -45,5 +52,14 @@ public class Cabin extends Room {
      * fight back against the attack. The fight ends when
      * either the enemy dies, or the player dies.
      */
-    // public void battle()
+    public void battle(Player player, Enemy enemy, Scanner in) {
+        if (enemyEncounter()) {
+            System.out.println("You have encountered an enemy!");
+            while(player.getHealth() != 0 || enemy.getHealth() != 0) {
+                System.out.println("What will you do?");
+                System.out.println("Attack       Flee");
+
+            }
+        }
+    }
 }
