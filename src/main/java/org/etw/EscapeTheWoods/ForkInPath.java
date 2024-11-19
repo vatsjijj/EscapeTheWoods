@@ -1,80 +1,112 @@
 package org.etw.EscapeTheWoods;
+
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Class: ForkInPath
+ * 
+ * @author Payson Briggs
+ * @version 1.0
+ * Course: CSE 201 Spring 2024
+ * Written: November 19, 2024
+ * 
+ * Purpose:
+ * This class represents a room in which the player encounters a fork
+ * in the path and must make decisions that affect their health, stamina,
+ * and inventory.
+ */
 public class ForkInPath {
+
+    // Attributes
     private Player player;
 
-    // constructor
-    public ForkInPath (Player player){
-        private Player player;
+    /**
+     * Constructor for the ForkInPath class.
+     * 
+     * @param player The player object interacting with the fork.
+     */
+    public ForkInPath(Player player) {
+        this.player = player;
     }
 
-    public void ecounterFork(Scanner scanner) {
-        System.out.println("you have entered a room with a fork in the path.");
-        System.out.println("you see a path splitting into two directions: Left and Right.");
-        System.out.println("which direction would you like to go? (left/right)");
+    /**
+     * Main logic for handling the player's encounter with the fork.
+     * 
+     * @param scanner A Scanner object for reading player input.
+     */
+    public void encounterFork(Scanner scanner) {
+        System.out.println("You have entered a room with a fork in the path.");
+        System.out.println("You see a path splitting into two directions: Left and Right.");
+        System.out.println("Which direction would you like to go? (left/right)");
 
         String direction = scanner.nextLine().toLowerCase();
-        if (direction.equals("Left")) { 
-            //chooses left
-            System.out.println("you chose to go left. You lose some stamina.");
-            player.setStamina(player.getStamina() - 10); 
+
+        if (direction.equals("left")) {
+            // Player chooses left
+            System.out.println("You chose to go left. You lose some stamina.");
+            player.setStamina(player.getStamina() - 10);
             checkStamina();
-        } else if (direction.equals("right")) { 
-            // chooses right
-            System.out.println("you chose to go right.");
-            if (player.getHunger() > 50) { 
-                System.out.println("you are feeling hungry. A random event occurs...") 
-                boolean surivived = randomEvent();
-                if (survived) {
-                    System.out.println("you survived the random event!");
-                    playerPassed();
-                } else {
-                    System.out.println("you didn't survive the random event.");
-                    playerPasswed();
-                } else {
-                    System.out.println("you didn't survive the random event.");
-                    player.setHealth(0); // death 
-            }
-        } else { 
-            System.out.println("You are not hungry. You find some food and add it to your inventory.");
-            Item food = new Food("Berries", " A handful of berries.", 1, 5);
-            player.addItem(food);
-            playerPassed();
-    } else {
-        System.out.println("Invalid choice. Try again.");
-        ecounterFork(scanner);
+        } else if (direction.equals("right")) {
+            // Player chooses right
+            System.out.println("You chose to go right.");
+            handleRightPath();
+        } else {
+            System.out.println("Invalid choice. Please try again.");
+            encounterFork(scanner); // Retry
+        }
     }
 
-
-/**
-*simulates a random event with a chance of survival.
-* 
-*@return true if player survives, false otherwise.
-*/
-private boolean randomEvent() { 
-    Random rand = new Random();
-    int chance = rand.nextInt(100); 
-    return chance >= 20;
-}
-/**
-*checks the player's stamina and notifies they are exhausted.
-*/
-        private void checkStamina() { 
-            if (player.getStamina() <= 0) {
-                System.out.println("You have run out of stamina and collapse.");
-                player.setHealth(0);
-            } else {
+    /**
+     * Handles the events when the player chooses the right path.
+     */
+    private void handleRightPath() {
+        if (player.getHunger() > 50) { // Example threshold for hunger
+            System.out.println("You are feeling hungry. A random event occurs...");
+            boolean survived = randomEvent();
+            if (survived) {
+                System.out.println("You survived the random event!");
                 playerPassed();
+            } else {
+                System.out.println("You didn't survive the random event.");
+                player.setHealth(0); // Player dies
             }
+        } else {
+            System.out.println("You are not hungry. You find some food and add it to your inventory.");
+            Item food = new Food("Berries", "A handful of berries.", 1, 5);
+            player.addItem(food);
+            playerPassed();
         }
-/** 
-* marks the player as successfully passing the fork.
-*/
-        private void playerPassed() { 
-            System.out.println("you have successfully passed the fork in the path!");
+    }
+
+    /**
+     * Simulates a random event with a chance of survival.
+     * 
+     * @return true if the player survives, false otherwise.
+     */
+    private boolean randomEvent() {
+        Random rand = new Random();
+        int chance = rand.nextInt(100); // Generate a random number between 0-99
+        return chance >= 20; // 80% chance of survival
+    }
+
+    /**
+     * Checks the player's stamina and notifies them if it runs out.
+     */
+    private void checkStamina() {
+        if (player.getStamina() <= 0) {
+            System.out.println("You have run out of stamina and collapse. Be careful next time!");
+            player.setHealth(0); // Player dies
+        } else {
+            playerPassed();
         }
+    }
+
+    /**
+     * Notifies the player that they have successfully passed the fork.
+     */
+    private void playerPassed() {
+        System.out.println("You have successfully passed the fork in the path!");
     }
 }
 
