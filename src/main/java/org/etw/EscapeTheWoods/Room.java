@@ -24,8 +24,22 @@ public class Room {
      */
     public Room(double difficulty,String description, String roomName){
         this.difficulty = difficulty;
-        this.description = description;
+        this.description= description;
         this.roomName = roomName;
     }
+
+    public double getDifficulty(){
+        return difficulty;
+    }
+
+    public String roomName(){
+        return roomName;
+    }
+    
+    public String getDescription(){
+        return description;
+    }
+
+
 
 } // end of class
