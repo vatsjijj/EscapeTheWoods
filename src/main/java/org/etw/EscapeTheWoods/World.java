@@ -28,6 +28,18 @@ public class World {
         this.worldTemp = worldTemp;
     }
 
+    public int getTime(){
+        return time;
+    }
+
+    public String getWeather(){
+        return weather;
+    }
+
+    public int getWorldTemp(){
+        return worldTemp;
+    }
+
     /**
      * Determines the room based on its name
      */
