@@ -7,6 +7,7 @@ public class Cabin extends Room {
     // Attributes
     private Player player;
     private Enemy enemy;
+    Scanner in = new Scanner(System.in);
 
     //Constructor
     public Cabin (double difficulty,String description, String roomName, Player player, Enemy enemy){
@@ -52,13 +53,38 @@ public class Cabin extends Room {
      * fight back against the attack. The fight ends when
      * either the enemy dies, or the player dies.
      */
-    public void battle(Player player, Enemy enemy, Scanner in) {
+    public void battle() {
+        Random rand = new Random();
+        boolean fleeSuccess = false;
         if (enemyEncounter()) {
             System.out.println("You have encountered an enemy!");
-            while(player.getHealth() != 0 || enemy.getHealth() != 0) {
+            while(player.getHealth() != 0 || enemy.getHealth() != 0 || !fleeSuccess) {
                 System.out.println("What will you do?");
                 System.out.println("Attack       Flee");
-
+                String choice = in.nextLine();
+                if (choice.equalsIgnoreCase("Attack")) {
+                    System.out.println("The enemy takes " + player.getDamage() +"damage!");
+                    enemy.takeDamage(player.getDamage());
+                    System.out.println("The enemy attacks!");
+                    System.out.println("You take " + enemy.getDamage() + "damage!");
+                    player.takeDamage(enemy.getDamage());
+                } else if (choice.equalsIgnoreCase("Flee")) {
+                    System.out.println("You try to escape!");
+                    int rand_int = rand.nextInt(100);
+                    if (rand_int >= 10) {
+                        System.out.println("Failure!");
+                        fleeSuccess = false;
+                        System.out.println("The enemy attacks!");
+                        System.out.println("You take " + enemy.getDamage() + "damage!");
+                        player.takeDamage(enemy.getDamage());
+                    } else {
+                        System.out.println("Success!");
+                        fleeSuccess = true;
+                    }
+                } else {
+                    System.out.println("Please enter a valid input.");
+                    break;
+                }
             }
         }
     }
