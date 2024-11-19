@@ -68,4 +68,42 @@ public class Lake extends Room {
             return true;
         }
     }
+    //Method to implement player choice
+    public void playerChoice(Scanner choice){
+        String playerChoice = "";
+        boolean leave = false;
+
+        while (!leave) {
+            System.out.println("What would you like to do?");
+            System.out.println("1. Fish");
+            System.out.println("2. Explore");
+            System.out.println("3. Leave the lake");
+            playerChoice = choice.nextLine();
+
+            switch (playerChoice.toLowerCase()) {
+                case "fish":
+                if (catchFish()) {
+                    System.out.println("You caught a fish!");
+                } else {
+                    System.out.println("You didn't catch anything.");
+                }
+                break;
+            case "explore":
+                if (exploreLake()) {
+                    System.out.println("You found an item!");
+                } else {
+                    System.out.println("You didn't find anything.");
+                }
+                break;
+            case "leave":
+                System.out.println("You decide to leave the lake.");
+                leave = true;  // Exit the loop
+                break;
+            default:
+                System.out.println("Ivalid Input.");
+                break;
+            }
+
+        }
+    }
 }
