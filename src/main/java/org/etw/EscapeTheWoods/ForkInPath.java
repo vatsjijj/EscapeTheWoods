@@ -58,8 +58,26 @@ private boolean randomEvent() {
     int chance = rand.nextInt(100); 
     return chance >= 20;
 }
+/**
+*checks the player's stamina and notifies they are exhausted.
+*/
+        private void checkStamina() { 
+            if (player.getStamina() <= 0) {
+                System.out.println("You have run out of stamina and collapse.");
+                player.setHealth(0);
+            } else {
+                playerPassed();
+            }
+        }
+/** 
+* marks the player as successfully passing the fork.
+*/
+        private void playerPassed() { 
+            System.out.println("you have successfully passed the fork in the path!");
+        }
+    }
 }
-}
+
 
     
         
