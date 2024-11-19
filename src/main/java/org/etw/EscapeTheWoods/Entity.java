@@ -17,7 +17,6 @@ public class Entity {
     private int damage;
     private int speed;
     private Room position;
-    private double stamina;
 
     /**
      * Constructor 1
@@ -60,9 +59,6 @@ public class Entity {
     *getter for stamina.
     *@return the entity's current stamina.
     */
-    public double getStamina() {
-        return this.stamina;
-    }
 
     /**
     * Setter for stamina.
@@ -79,8 +75,6 @@ public class Entity {
         }
     }
 
- 
-
     /**
      * Allows the entity to attack another entity
      * @param entity
@@ -89,6 +83,7 @@ public class Entity {
     public boolean attack(Entity entity) {
         return entity.takeDamage(damage);
     }
+
 
     /**
      * The entity takes damage, decreasing its health
