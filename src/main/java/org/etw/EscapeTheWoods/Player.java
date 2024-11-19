@@ -79,6 +79,17 @@ public class Player extends Entity implements Serializable {
         }
     }
 
+    /** 
+    *checks if an item exists in the player's inventory.
+    *
+    * @param item the item to check
+    * @return true if the item is in the inventory
+    */
+    public boolean hasItem(Item item) {
+        return inventory.contains(item);
+            }
+
+
     /**
      * A getter for the temperature of the player.
      * @return The temperature of the player.
