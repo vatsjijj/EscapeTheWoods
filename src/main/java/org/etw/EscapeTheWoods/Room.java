@@ -32,10 +32,10 @@ public class Room {
         return difficulty;
     }
 
-    public String roomName(){
+    public String getroomName(){
         return roomName;
     }
-    
+
     public String getDescription(){
         return description;
     }
