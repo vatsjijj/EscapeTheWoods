@@ -45,6 +45,14 @@ public class Item {
         return new Item("Cat Fish", "Common Fish", 1);
     }
 
+    public static Item ammo(){
+        return new Item(".308 round", "Ammo used for rifle", 3);
+    }
+
+    public static Item stones(){
+        return new Item("stone", "Ammo used for slingshot", 1);
+    }
+
     public String getName(){
         return this.name;
     }
