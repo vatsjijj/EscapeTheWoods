@@ -70,7 +70,7 @@ public class Player extends Entity implements Serializable {
     */
     public boolean removeItem(Item item) {
         if (inventory.contains(item)) { 
-            iventory.remove(item));
+            inventory.remove(item));
             System.out.println(item.getName() + " has been removed from your inventory.");
             return true;
         } else {
