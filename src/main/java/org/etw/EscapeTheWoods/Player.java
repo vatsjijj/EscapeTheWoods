@@ -70,7 +70,7 @@ public class Player extends Entity implements Serializable {
     */
     public boolean removeItem(Item item) {
         if (inventory.contains(item)) { 
-            inventory.remove(item));
+            inventory.remove(item);
             System.out.println(item.getName() + " has been removed from your inventory.");
             return true;
         } else {
@@ -78,6 +78,17 @@ public class Player extends Entity implements Serializable {
             return false;
         }
     }
+
+    /** 
+    *checks if an item exists in the player's inventory.
+    *
+    * @param item the item to check
+    * @return true if the item is in the inventory
+    */
+    public boolean hasItem(Item item) {
+        return inventory.contains(item);
+            }
+
 
     /**
      * A getter for the temperature of the player.

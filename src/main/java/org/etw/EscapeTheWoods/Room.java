@@ -22,12 +22,14 @@ public class Room {
      * @param difficulty
      * @param description
      */
+
     public Room(double difficulty,String description, String roomName){
         this.difficulty = difficulty;
         this.description= description;
         this.roomName = roomName;
     }
 
+<<<<<<< HEAD
     public double getDifficulty(){
         return difficulty;
     }
@@ -42,4 +44,18 @@ public class Room {
 
 
 
+=======
+    public double getDifficulty() {
+        return this.difficulty;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public String getRoomName() {
+        return this.roomName;
+    }
+
+>>>>>>> origin/main
 } // end of class

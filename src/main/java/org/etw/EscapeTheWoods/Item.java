@@ -41,6 +41,10 @@ public class Item {
         return new Item("Blue Berry", "Safe to eat", 2);
     }
 
+    public static Item wood(){
+        return new Item("Wood", "Scavenged Wood", 1);
+    }
+
     public static Item catFish(){
         return new Item("Cat Fish", "Common Fish", 1);
     }
