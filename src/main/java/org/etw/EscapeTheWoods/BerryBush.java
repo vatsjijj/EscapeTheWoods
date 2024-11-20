@@ -68,7 +68,7 @@ public class BerryBush extends Room {
 
     //room description
     public void printRoomDescription(){
-        System.out.println(getroomName());
+        System.out.println(getRoomName());
         System.out.println(getDescription());
     }
 

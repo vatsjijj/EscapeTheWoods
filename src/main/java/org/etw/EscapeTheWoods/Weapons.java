@@ -25,8 +25,7 @@ public class Weapons extends Item{
         super(name, description, rarity);
         this.DamageMultiplyer = DamageMultiplyer;
     }
-<<<<<<< HEAD
-=======
+
 
     public static Weapons rifle(){
         return new Weapons("Rifle (.308)", "Old Rifle", 5, 100);
@@ -47,5 +46,4 @@ public class Weapons extends Item{
     public int getDamage(){
         return this.DamageMultiplyer;
     }
->>>>>>> origin/main
 }
