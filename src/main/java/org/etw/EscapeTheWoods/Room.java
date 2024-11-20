@@ -29,22 +29,6 @@ public class Room {
         this.roomName = roomName;
     }
 
-<<<<<<< HEAD
-    public double getDifficulty(){
-        return difficulty;
-    }
-
-    public String getroomName(){
-        return roomName;
-    }
-
-    public String getDescription(){
-        return description;
-    }
-
-
-
-=======
     public double getDifficulty() {
         return this.difficulty;
     }
@@ -57,5 +41,4 @@ public class Room {
         return this.roomName;
     }
 
->>>>>>> origin/main
 } // end of class
