@@ -2,17 +2,33 @@ package org.etw.EscapeTheWoods;
 
 import java.util.ArrayList;
 
+/**
+ * The tokenizer class for user input.
+ * @see Token
+ */
 public class Tokenizer {
     private final String in;
     private ArrayList<Token> toks;
     private StringBuilder builder;
 
+    /**
+     * The normative constructor for the class.
+     * @param in The string or file to be read in.
+     */
     public Tokenizer(String in) {
         this.in = in.toLowerCase();
         this.toks = new ArrayList<>();
         this.builder = new StringBuilder();
     }
 
+    /**
+     * Generates an identifier token.
+     * @param start The start column.
+     * @param end The end column.
+     * @return The generated and constructed identifier token.
+     * @throws IllegalArgumentException In case of an error, throws.
+     * @see Token
+     */
     private Token identifier(int start, int end) throws IllegalArgumentException {
         return switch (builder.toString()) {
             case "y", "yes" -> new Token(
@@ -34,6 +50,11 @@ public class Tokenizer {
         };
     }
 
+    /**
+     * Runs the tokenization process.
+     * @return The list of tokens that were generated.
+     * @see Token
+     */
     public ArrayList<Token> tokenize() {
         int idx = 0;
 
@@ -65,10 +86,18 @@ public class Tokenizer {
         return this.toks;
     }
 
+    /**
+     * Gets the input string.
+     * @return The input string.
+     */
     public String getIn() {
         return this.in;
     }
 
+    /**
+     * Gets the token list.
+     * @return The token list.
+     */
     public ArrayList<Token> getToks() {
         return this.toks;
     }
