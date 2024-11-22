@@ -43,5 +43,6 @@ public class Main {
         userChoice.close();
     }
 
+    //make random?
     //berry bush, forkInPath, cabin, lake
 } //end of main
