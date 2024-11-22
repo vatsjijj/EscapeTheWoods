@@ -16,11 +16,7 @@ import java.util.Scanner;
  * a very basic UI.
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Welcome to Escape the Woods.");
-        System.out.println("Type help for a list of commands.");
-        System.out.println("Would you like to start the game? [Y]/[N]");
-        
+    private static void gameLoop() {
         // Create the world and player
         World world = new World(1000, "Sunny", 80);
         Player player = new Player();
@@ -32,14 +28,35 @@ public class Main {
         var tk = new Tokenizer(answer);
         var toks = tk.tokenize();
         var result = Evaluate.eval(toks);
-        System.out.println(switch (result) {
-            case ProgramResult.Yes x   -> "Yes";
-            case ProgramResult.No x    -> "No";
-            case ProgramResult.Help x  -> world.help();
-            case ProgramResult.Error x -> x.msg();
-        });
+        for (;;) {
+            boolean ok = true;
+            switch (result) {
+                case ProgramResult.Yes   x: System.out.println("Yes"); break;
+                case ProgramResult.No    x: System.out.println("No"); break;
+                case ProgramResult.Help  x: System.out.println(world.help()); break;
+                case ProgramResult.Error x:
+                    System.err.println(x.msg());
+                    ok = false;
+                    break;
+            }
+            if (!ok) {
+                break;
+            }
+            answer = userChoice.nextLine() + '\n';
+            tk = new Tokenizer(answer);
+            toks = tk.tokenize();
+            result = Evaluate.eval(toks);
+        }
 
         //close scanner
         userChoice.close();
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to Escape the Woods.");
+        System.out.println("Type help for a list of commands.");
+        System.out.println("Would you like to start the game? [Y]/[N]");
+        
+        gameLoop();
     }
 } //end of main

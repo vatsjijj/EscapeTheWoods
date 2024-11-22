@@ -46,7 +46,11 @@ public class Tokenizer {
                 builder.toString(),
                 start, end
             );
-            default         -> throw new IllegalArgumentException("How did you get here?");
+            default         -> new Token(
+                TokenType.ERROR,
+                builder.toString(),
+                start, end
+            );
         };
     }
 
