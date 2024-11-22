@@ -10,5 +10,6 @@ public enum TokenType {
     YES,
     NO,
     HELP,
+    ERROR,
     EOI,
 }

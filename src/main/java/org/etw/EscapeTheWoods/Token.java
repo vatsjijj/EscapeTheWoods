@@ -45,10 +45,11 @@ public final class Token {
 
         builder.append("Type: ");
         builder.append(switch (type) {
-            case YES  -> "YES; ";
-            case NO   -> "NO; ";
-            case HELP -> "HELP; ";
-            case EOI  -> "EOI; ";
+            case YES   -> "YES; ";
+            case NO    -> "NO; ";
+            case HELP  -> "HELP; ";
+            case ERROR -> "ERROR; ";
+            case EOI   -> "EOI; ";
         });
         builder.append("Content: ");
         builder.append(content + " ");
