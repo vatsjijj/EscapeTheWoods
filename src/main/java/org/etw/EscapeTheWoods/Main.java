@@ -42,4 +42,6 @@ public class Main {
         //close scanner
         userChoice.close();
     }
+
+    //berry bush, forkInPath, cabin, lake
 } //end of main
