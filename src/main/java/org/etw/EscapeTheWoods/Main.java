@@ -52,10 +52,10 @@ public class Main {
         userChoice.close();
     }
 
-<<<<<<< HEAD
+
     //make random?
     //berry bush, forkInPath, cabin, lake
-=======
+
     public static void main(String[] args) {
         System.out.println("Welcome to Escape the Woods.");
         System.out.println("Type help for a list of commands.");
@@ -63,5 +63,5 @@ public class Main {
         
         gameLoop();
     }
->>>>>>> origin/main
+
 } //end of main
