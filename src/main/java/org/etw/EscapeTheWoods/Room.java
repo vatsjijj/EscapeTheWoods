@@ -10,7 +10,6 @@
 
 package org.etw.EscapeTheWoods;
 
-
 public class Room {
     // attributes
     private double difficulty;
@@ -22,21 +21,32 @@ public class Room {
      * @param difficulty
      * @param description
      */
-
     public Room(double difficulty,String description, String roomName){
         this.difficulty = difficulty;
         this.description= description;
         this.roomName = roomName;
     }
 
+    /**
+     * Getter for the difficulty of the room
+     * @return the difficulty
+     */
     public double getDifficulty() {
         return this.difficulty;
     }
 
+    /**
+     * Getter for the description of the room
+     * @return the description
+     */
     public String getDescription() {
         return this.description;
     }
 
+    /**
+     * Getter for the name of the room
+     * @return the room name
+     */
     public String getRoomName() {
         return this.roomName;
     }
