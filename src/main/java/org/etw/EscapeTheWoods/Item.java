@@ -29,30 +29,58 @@ public class Item {
         this.rarity = rarity;
     }
 
+    /**
+     * A red berry item. Safe to eat and common.
+     * @return the red berry
+     */
     public static Item redBerry(){
         return new Item("Berry", "Safe to eat", 1 );
     }
 
+    /**
+     * A white berry item. Harmful to eat and common.
+     * @return the white berry
+     */
     public static Item whiteBerry(){
         return new Item("White Berry", "Not safe to eat", 1);
     }
 
+    /**
+     * A blue berry item. Safe to eat, slightly more rare.
+     * @return the blue berry
+     */
     public static Item blueBerry(){
         return new Item("Blue Berry", "Safe to eat", 2);
     }
 
+    /**
+     * Wood item collected for use in fire. Common.
+     * @return the wood
+     */
     public static Item wood(){
         return new Item("Wood", "Scavenged Wood", 1);
     }
 
+    /**
+     * A catfish item caught while fishing in the lake room.
+     * @return the catfish
+     */
     public static Item catFish(){
         return new Item("Cat Fish", "Common Fish", 1);
     }
 
+    /**
+     * Ammo item that can be found. Used when using a rifle weapon.
+     * @return
+     */
     public static Item ammo(){
         return new Item(".308 round", "Ammo used for rifle", 3);
     }
 
+    /**
+     * Stones item that can be found. Similar to ammo but for slingshot weapon.
+     * @return
+     */
     public static Item stones(){
         return new Item("stone", "Ammo used for slingshot", 1);
     }
@@ -65,7 +93,7 @@ public class Item {
         return this.description;
     }
 
-    public int rarity(){
+    public int getRarity(){
         return this.rarity;
     }
 
