@@ -85,14 +85,26 @@ public class Item {
         return new Item("stone", "Ammo used for slingshot", 1);
     }
 
+    /**
+     * Getter method for item name
+     * @return the name
+     */
     public String getName(){
         return this.name;
     }
 
+    /**
+     * Getter method for item description
+     * @return the description
+     */
     public String getDescription(){
         return this.description;
     }
 
+    /**
+     * Getter method for item rarity
+     * @return the rarity
+     */
     public int getRarity(){
         return this.rarity;
     }
