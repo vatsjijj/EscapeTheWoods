@@ -28,14 +28,26 @@ public class World {
         this.worldTemp = worldTemp;
     }
 
+    /**
+     * Getter for world time
+     * @return the time
+     */
     public int getTime(){
         return time;
     }
 
+    /**
+     * Getter for world weather
+     * @return the weather
+     */
     public String getWeather(){
         return weather;
     }
 
+    /**
+     * Getter for world temperature
+     * @return the temperature
+     */
     public int getWorldTemp(){
         return worldTemp;
     }
