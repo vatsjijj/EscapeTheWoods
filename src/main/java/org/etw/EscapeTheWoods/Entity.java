@@ -54,12 +54,6 @@ public class Entity {
         this.position = position;
     }
 
-
-    /** 
-    *getter for stamina.
-    *@return the entity's current stamina.
-    */
-
     /**
     * Setter for stamina.
     *
@@ -158,7 +152,7 @@ public class Entity {
 
     /**
      * Getter for speed
-     * @return
+     * @return the speed
      */
     public int getSpeed() {
         return this.speed;
