@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Class: Main 
- * @author Brandon Belfiore
+ * @author Aidan O'Connor
  * @version 1.0
  * Course: CSE 201 Spring 2024
  * Written: October 31, 2024
