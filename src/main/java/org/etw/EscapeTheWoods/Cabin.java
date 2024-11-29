@@ -18,6 +18,12 @@ public class Cabin extends Room {
 
     //public boolean exploreCabinPlayer(Scanner choice)
 
+    /**
+     * The player has a 30% chance of encountering
+     * an enemy. Method is used every time the player does
+     * an action, besides battling. 
+     * @return true if player encounters an enemy, false if not
+     */
     public boolean enemyEncounter(){
         Random rand = new Random();
         int rand_int = rand.nextInt(100);
