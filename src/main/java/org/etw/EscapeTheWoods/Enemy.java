@@ -27,10 +27,19 @@ public class Enemy extends Entity {
         super(health, stamina, damage, speed);
     }
 
+    /**
+     * Creates a new Enemy bear. Very powerful with lower speed and stamina.
+     * @return the bear
+     */
     public static Enemy bear(){
         return new Enemy(200.0, 50.0, 40, 20);
     }
 
+    /**
+     * Creates a new Enemy wolf. Quick and nimple, but not as strong
+     * as the bear. 
+     * @return the wolf
+     */
     public static Enemy wolf(){
         return new Enemy(100.0, 100.0, 25, 35);
     }
