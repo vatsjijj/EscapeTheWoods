@@ -67,6 +67,7 @@ public class World {
         sb.append("List of commands:\n");
         sb.append("Note: ONLY SOME OF THESE WORK!\n");
         sb.append("help: display this message\n");
+        sb.append("eat, consume, drink: consume an item\n");
         sb.append("inventory: check your inventory\n");
         sb.append("stats: check your stats");
         return sb.toString();

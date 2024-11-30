@@ -31,12 +31,12 @@ public class Tokenizer {
      */
     private Token identifier(int start, int end) throws IllegalArgumentException {
         return switch (builder.toString()) {
-            case "y", "yes" -> new Token(
+            case "y", "yes"  -> new Token(
                 TokenType.YES,
                 builder.toString(),
                 start, end
             );
-            case "n", "no"  -> new Token(
+            case "n", "no"   -> new Token(
                 TokenType.NO,
                 builder.toString(),
                 start, end
@@ -46,8 +46,18 @@ public class Tokenizer {
                 builder.toString(),
                 start, end
             );
-            default         -> new Token(
-                TokenType.ERROR,
+            case "inventory" -> new Token(
+                TokenType.INV,
+                builder.toString(),
+                start, end
+            );
+            case "eat", "drink", "consume" -> new Token(
+                TokenType.EAT,
+                builder.toString(),
+                start, end
+            );
+            default          -> new Token(
+                TokenType.ID,
                 builder.toString(),
                 start, end
             );

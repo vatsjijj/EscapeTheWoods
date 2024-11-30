@@ -36,11 +36,20 @@ public class Player extends Entity implements Serializable {
 
     /**
      * Allows the player entity to eat a food item.
-     * @param food The food to be eaten.
+     * @param idx The index of the food item to be eaten.
      * @return True if the food was eaten, false otherwise.
      */
-    public boolean eat(Food food) {
-        // Need to expand on the Food class.
+    public boolean eat(int idx) {
+        var item = inventory.get(idx);
+
+        // If their health is 100 you'll become the hulk or something.
+        if (item instanceof Food) {
+            health += 10;
+            inventory.remove(idx);
+        } else {
+            System.out.println("This isn't food!");
+        }
+
         return true;
     }
 
@@ -128,5 +137,29 @@ public class Player extends Entity implements Serializable {
      */
     public int getScore() {
         return this.score;
+    }
+
+    public int findItem(String name) {
+        for (int i = 0; i < inventory.size(); i++) {
+            if (inventory.get(i).getName().toLowerCase().equals(name.strip())) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void printInventory() {
+        if (inventory.isEmpty()) {
+            System.out.println("Your inventory is empty!");
+            return;
+        }
+        for (var i : inventory) {
+            System.out.print(i.getName() + " ");
+            if (i instanceof Food) {
+                System.out.println(((Food)i).getQuanity());
+            } else {
+                System.out.println('\b');
+            }
+        }
     }
 }

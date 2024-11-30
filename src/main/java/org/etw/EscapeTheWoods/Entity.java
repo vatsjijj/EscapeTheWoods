@@ -12,11 +12,11 @@ package org.etw.EscapeTheWoods;
  * a player, or an enemy.
  */
 public class Entity {
-    private double health;
-    private double stamina;
-    private int damage;
-    private int speed;
-    private Room position;
+    protected double health;
+    protected double stamina;
+    protected int damage;
+    protected int speed;
+    protected Room position;
 
     /**
      * Constructor 1

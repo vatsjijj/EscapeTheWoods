@@ -38,6 +38,14 @@ public final class Token {
     }
 
     /**
+     * Returns the content of the token.
+     * @return The token content.
+     */
+    public String getContent() {
+        return this.content;
+    }
+
+    /**
      * Generates a string for this class.
      */
     public String toString() {
@@ -45,9 +53,12 @@ public final class Token {
 
         builder.append("Type: ");
         builder.append(switch (type) {
+            case ID    -> "ID; ";
             case YES   -> "YES; ";
             case NO    -> "NO; ";
             case HELP  -> "HELP; ";
+            case INV   -> "INV; ";
+            case EAT   -> "EAT; ";
             case ERROR -> "ERROR; ";
             case EOI   -> "EOI; ";
         });

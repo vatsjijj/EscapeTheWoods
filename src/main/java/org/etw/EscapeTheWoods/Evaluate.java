@@ -16,16 +16,45 @@ public final class Evaluate {
      * @return The result of the user input.
      * @see Token
      */
-    public static ProgramResult eval(ArrayList<Token> toks) {
+    public static ProgramResult eval(ArrayList<Token> toks, Player player) {
         Queue<ProgramResult> results = new ArrayDeque<>();
-        for (var i : toks) {
-            results.add(switch (i.getType()) {
-                case YES  -> new ProgramResult.Yes();
-                case NO   -> new ProgramResult.No();
-                case HELP -> new ProgramResult.Help();
-                case EOI  -> new ProgramResult.Yes();
-                default   -> new ProgramResult.Error("Invalid token.");
-            });
+        for (int i = 0; i < toks.size(); i++) {
+            ProgramResult tRes;
+            var item = toks.get(i);
+            switch (item.getType()) {
+                case INV: tRes = new ProgramResult.Inventory(); break;
+                case EAT:
+                    StringBuilder builder = new StringBuilder();
+                    i++;
+                    item = toks.get(i);
+                    if (item.getType() == TokenType.ID) {
+                        while (item.getType() == TokenType.ID) {
+                            builder.append(item.getContent() + " ");
+                            i++;
+                            item = toks.get(i);
+                        }
+                    }
+                    tRes = new ProgramResult.Eat(
+                        player.findItem(builder.toString())
+                    );
+                    break;
+                case YES: 
+                    tRes = new ProgramResult.Yes();
+                    break;
+                case NO: 
+                    tRes = new ProgramResult.No();
+                    break;
+                case HELP: 
+                    tRes = new ProgramResult.Help();
+                    break;
+                case EOI: 
+                    tRes = new ProgramResult.Yes();
+                    break;
+                default: 
+                    tRes = new ProgramResult.Error("Invalid token.");
+                    break;
+            }
+            results.add(tRes);
         }
         return results.peek();
     }

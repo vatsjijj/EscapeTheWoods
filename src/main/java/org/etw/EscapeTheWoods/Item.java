@@ -11,7 +11,6 @@
 package org.etw.EscapeTheWoods;
 
 public class Item {
-
     // attributes
     private String name;
     private String description;
@@ -30,43 +29,11 @@ public class Item {
     }
 
     /**
-     * A red berry item. Safe to eat and common.
-     * @return the red berry
-     */
-    public static Item redBerry(){
-        return new Item("Berry", "Safe to eat", 1 );
-    }
-
-    /**
-     * A white berry item. Harmful to eat and common.
-     * @return the white berry
-     */
-    public static Item whiteBerry(){
-        return new Item("White Berry", "Not safe to eat", 1);
-    }
-
-    /**
-     * A blue berry item. Safe to eat, slightly more rare.
-     * @return the blue berry
-     */
-    public static Item blueBerry(){
-        return new Item("Blue Berry", "Safe to eat", 2);
-    }
-
-    /**
      * Wood item collected for use in fire. Common.
      * @return the wood
      */
     public static Item wood(){
         return new Item("Wood", "Scavenged Wood", 1);
-    }
-
-    /**
-     * A catfish item caught while fishing in the lake room.
-     * @return the catfish
-     */
-    public static Item catFish(){
-        return new Item("Cat Fish", "Common Fish", 1);
     }
 
     /**

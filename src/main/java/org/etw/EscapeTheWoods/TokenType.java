@@ -7,9 +7,12 @@ package org.etw.EscapeTheWoods;
  * @see Token
  */
 public enum TokenType {
+    ID,
     YES,
     NO,
     HELP,
+    EAT,
+    INV,
     ERROR,
     EOI,
 }

@@ -21,20 +21,32 @@ public class Main {
         World world = new World(1000, "Sunny", 80);
         Player player = new Player();
 
+        player.addItem(Food.blueBerry());
+        player.addItem(Food.catFish());
+
         // Create scanner
         Scanner userChoice = new Scanner(System.in);
         // answer is the nextLine
+        System.out.print("> ");
         var answer = userChoice.nextLine() + '\n';
         var tk = new Tokenizer(answer);
         var toks = tk.tokenize();
-        var result = Evaluate.eval(toks);
+        var result = Evaluate.eval(toks, player);
         for (;;) {
             boolean ok = true;
             switch (result) {
-                case ProgramResult.Yes   x: System.out.println("Yes"); break;
-                case ProgramResult.No    x: System.out.println("No"); break;
-                case ProgramResult.Help  x: System.out.println(world.help()); break;
-                case ProgramResult.Error x:
+                case ProgramResult.Inventory x:
+                    player.printInventory();
+                    break;
+                case ProgramResult.Eat       x:
+                    player.eat(x.index());
+                    System.out.println("Consumed an item!");
+                    break;
+                case ProgramResult.Yes       x: break;
+                case ProgramResult.No        x: break;
+                case ProgramResult.Help      x:
+                    System.out.println(world.help()); break;
+                case ProgramResult.Error     x:
                     System.err.println(x.msg());
                     ok = false;
                     break;
@@ -42,10 +54,11 @@ public class Main {
             if (!ok) {
                 break;
             }
+            System.out.print("> ");
             answer = userChoice.nextLine() + '\n';
             tk = new Tokenizer(answer);
             toks = tk.tokenize();
-            result = Evaluate.eval(toks);
+            result = Evaluate.eval(toks, player);
         }
 
         //close scanner
@@ -59,7 +72,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Escape the Woods.");
         System.out.println("Type help for a list of commands.");
-        System.out.println("Would you like to start the game? [Y]/[N]");
         
         gameLoop();
     }
