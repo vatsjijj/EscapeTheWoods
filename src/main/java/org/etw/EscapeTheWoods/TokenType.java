@@ -11,8 +11,9 @@ public enum TokenType {
     YES,
     NO,
     HELP,
-    EAT,
     INV,
+    STATS,
+    EAT,
     ERROR,
     EOI,
 }

@@ -23,6 +23,7 @@ public final class Evaluate {
             var item = toks.get(i);
             switch (item.getType()) {
                 case INV: tRes = new ProgramResult.Inventory(); break;
+                case STATS: tRes = new ProgramResult.Stats(); break;
                 case EAT:
                     StringBuilder builder = new StringBuilder();
                     i++;

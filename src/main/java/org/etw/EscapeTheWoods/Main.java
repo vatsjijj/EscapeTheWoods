@@ -38,6 +38,9 @@ public class Main {
                 case ProgramResult.Inventory x:
                     player.printInventory();
                     break;
+                case ProgramResult.Stats x:
+                    player.printStats();
+                    break;
                 case ProgramResult.Eat       x:
                     player.eat(x.index());
                     System.out.println("Consumed an item!");

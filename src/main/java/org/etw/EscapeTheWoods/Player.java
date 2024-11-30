@@ -148,6 +148,17 @@ public class Player extends Entity implements Serializable {
         return -1;
     }
 
+    public void printStats() {
+        System.out.print("Health: ");
+        System.out.println(health);
+        System.out.print("Stamina: ");
+        System.out.println(stamina);
+        System.out.print("Thirst: ");
+        System.out.println(thirst);
+        System.out.print("Hunger: ");
+        System.out.println(hunger);
+    }
+
     public void printInventory() {
         if (inventory.isEmpty()) {
             System.out.println("Your inventory is empty!");
