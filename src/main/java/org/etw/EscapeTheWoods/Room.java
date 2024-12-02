@@ -51,4 +51,5 @@ public class Room {
         return this.roomName;
     }
 
+    public void play(Player player, World world) {}
 } // end of class

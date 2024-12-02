@@ -12,9 +12,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Lake extends Room {
-
     //Constructor
-    public Lake (double difficulty,String description, String roomName) {
+    public Lake() {
         super(1, "You have found a lake.", "Lake");
     }
 
@@ -23,7 +22,8 @@ public class Lake extends Room {
      * either fish or explore.
      * @param choice A scanner than takes the user's input
      */
-    public void askPlayer(Scanner choice){ 
+    public void askPlayer(){
+        Scanner choice = new Scanner(System.in);
         String userChoice = "";
         System.out.println("Would you like to fish or explore?");
         userChoice = choice.nextLine();
@@ -33,6 +33,7 @@ public class Lake extends Room {
             // To be Implemented 
             exploreLake();
         }
+        choice.close();
     }
 
     /**
@@ -69,7 +70,8 @@ public class Lake extends Room {
         }
     }
     //Method to implement player choice
-    public void playerChoice(Scanner choice){
+    public void play(Player player, World world){
+        Scanner choice = new Scanner(System.in);
         String playerChoice = "";
         boolean leave = false;
 
@@ -121,7 +123,10 @@ public class Lake extends Room {
                 System.out.println("Invalid Input.");
                 break;
             }
-
         }
+        choice.close();
+
+        System.out.println("You have escaped the woods!");
+        System.exit(0);
     }
 }

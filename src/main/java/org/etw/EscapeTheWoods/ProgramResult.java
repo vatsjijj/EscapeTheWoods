@@ -24,6 +24,7 @@ public sealed interface ProgramResult {
     record Help() implements ProgramResult {};
     record Inventory() implements ProgramResult {};
     record Stats() implements ProgramResult {};
+    record To(String room) implements ProgramResult {};
     record Eat(int index) implements ProgramResult {};
     record Error(String msg) implements ProgramResult {};
 }

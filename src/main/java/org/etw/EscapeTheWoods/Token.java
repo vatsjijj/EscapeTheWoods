@@ -59,6 +59,7 @@ public final class Token {
             case HELP  -> "HELP; ";
             case INV   -> "INV; ";
             case STATS -> "STATS; ";
+            case TO    -> "TO; ";
             case EAT   -> "EAT; ";
             case ERROR -> "ERROR; ";
             case EOI   -> "EOI; ";

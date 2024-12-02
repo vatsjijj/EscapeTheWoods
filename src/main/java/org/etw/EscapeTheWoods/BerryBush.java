@@ -12,11 +12,11 @@
 package org.etw.EscapeTheWoods;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class BerryBush extends Room {
-    
     // Constructor
-    public BerryBush(double difficulty,String description, String roomName) {
+    public BerryBush() {
         super(1, "You have found a berry bush.", "Berry Bush");
     }
 
@@ -66,10 +66,40 @@ public class BerryBush extends Room {
         }
     }
 
+    public void play(Player player, World world) {
+        Scanner userIn = new Scanner(System.in);
+        System.out.println("\nDo you want to pick the berries and eat them? Y/n");
+        System.out.print("> ");
+        var answer = userIn.nextLine() + '\n';
+        var tk = new Tokenizer(answer);
+        var toks = tk.tokenize();
+        var result = Evaluate.eval(toks, player);
+        var yes = switch (result) {
+            case ProgramResult.Yes x -> true;
+            default -> false;
+        };
+        // Needs stuff.
+        if (yes && isEdible()) {
+            System.out.println("You have eaten the berry! You feel a bit better!");
+            player.health += 5;
+        } else if (yes && !isEdible()) {
+            System.out.println("You have eaten the berry! You feel really sick.");
+            player.health -= 15;
+        } else if (!yes && isEdible()) {
+            System.out.println("You ignore the berries. Oh well...");
+        } else {
+            System.out.println("You gladly ignore the berries.");
+        }
+
+        System.out.println("What will you do next? Go north and continue your journey?");
+        Main.eval(userIn, player, world);
+
+        userIn.close();
+    }
+
     //room description
     public void printRoomDescription(){
         System.out.println(getRoomName());
         System.out.println(getDescription());
     }
-
 }

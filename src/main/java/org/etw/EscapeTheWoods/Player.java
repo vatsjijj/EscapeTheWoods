@@ -173,4 +173,11 @@ public class Player extends Entity implements Serializable {
             }
         }
     }
+
+    public boolean die() {
+        health = 0;
+        System.out.println("You have died!");
+        System.exit(0);
+        return true;
+    }
 }

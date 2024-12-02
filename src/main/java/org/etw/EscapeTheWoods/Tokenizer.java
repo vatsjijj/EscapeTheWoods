@@ -56,6 +56,11 @@ public class Tokenizer {
                 builder.toString(),
                 start, end
             );
+            case "to", "go" -> new Token(
+                TokenType.TO,
+                builder.toString(),
+                start, end
+            );
             case "eat", "drink", "consume" -> new Token(
                 TokenType.EAT,
                 builder.toString(),

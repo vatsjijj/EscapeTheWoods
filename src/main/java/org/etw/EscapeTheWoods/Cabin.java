@@ -3,16 +3,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Cabin extends Room {
-
     // Attributes
-    private Player player;
     private Enemy enemy;
     Scanner in = new Scanner(System.in);
 
     //Constructor
-    public Cabin (double difficulty,String description, String roomName, Player player, Enemy enemy){
+    public Cabin(Enemy enemy){
         super(1, "You see a cabin in the distance", "Abandoned Cabin");
-        this.player = player;
         this.enemy = enemy;
     }
 
@@ -60,20 +57,21 @@ public class Cabin extends Room {
      * either the enemy dies, the player dies, or the player
      * flees.
      */
-    public void battle() {
+    public void play(Player player, World world) {
+        System.out.println("You see a cabin in the distance.");
         Random rand = new Random();
         boolean fleeSuccess = false;
         if (enemyEncounter()) {
             System.out.println("You have encountered an enemy!");
-            while(player.getHealth() != 0 || enemy.getHealth() != 0 || !fleeSuccess) {
+            while(player.getHealth() > 0 || enemy.getHealth() > 0 || !fleeSuccess) {
                 System.out.println("What will you do?");
                 System.out.println("Attack       Flee");
                 String choice = in.nextLine();
                 if (choice.equalsIgnoreCase("Attack")) {
-                    System.out.println("The enemy takes " + player.getDamage() +"damage!");
+                    System.out.println("The enemy takes " + player.getDamage() +" damage!");
                     enemy.takeDamage(player.getDamage());
                     System.out.println("The enemy attacks!");
-                    System.out.println("You take " + enemy.getDamage() + "damage!");
+                    System.out.println("You take " + enemy.getDamage() + " damage!");
                     player.takeDamage(enemy.getDamage());
                 } else if (choice.equalsIgnoreCase("Flee")) {
                     System.out.println("You try to escape!");
@@ -82,7 +80,7 @@ public class Cabin extends Room {
                         System.out.println("Failure!");
                         fleeSuccess = false;
                         System.out.println("The enemy attacks!");
-                        System.out.println("You take " + enemy.getDamage() + "damage!");
+                        System.out.println("You take " + enemy.getDamage() + " damage!");
                         player.takeDamage(enemy.getDamage());
                     } else {
                         System.out.println("Success!");
@@ -94,5 +92,11 @@ public class Cabin extends Room {
                 }
             }
         }
+        if (player.isDead()) {
+            player.die();
+        }
+        System.out.println("You have escaped the cabin!");
+        player.position = new Lake();
+        player.position.play(player, world);
     }
 }

@@ -24,7 +24,20 @@ public final class Evaluate {
             switch (item.getType()) {
                 case INV: tRes = new ProgramResult.Inventory(); break;
                 case STATS: tRes = new ProgramResult.Stats(); break;
-                case EAT:
+                case TO: {
+                    StringBuilder builder = new StringBuilder();
+                    i++;
+                    item = toks.get(i);
+                    if (item.getType() == TokenType.ID) {
+                        while (item.getType() == TokenType.ID) {
+                            builder.append(item.getContent() + " ");
+                            i++;
+                            item = toks.get(i);
+                        }
+                    }
+                    tRes = new ProgramResult.To(builder.toString());
+                } break;
+                case EAT: {
                     StringBuilder builder = new StringBuilder();
                     i++;
                     item = toks.get(i);
@@ -38,7 +51,7 @@ public final class Evaluate {
                     tRes = new ProgramResult.Eat(
                         player.findItem(builder.toString())
                     );
-                    break;
+                } break;
                 case YES: 
                     tRes = new ProgramResult.Yes();
                     break;

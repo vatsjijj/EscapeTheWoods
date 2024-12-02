@@ -13,6 +13,7 @@ public enum TokenType {
     HELP,
     INV,
     STATS,
+    TO,
     EAT,
     ERROR,
     EOI,

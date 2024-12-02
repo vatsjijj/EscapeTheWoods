@@ -100,7 +100,6 @@ public class Entity {
         return this.damage;
     }
 
-    
     /**
      * Sets an entities health to zero
      * @return true, will always set to zero

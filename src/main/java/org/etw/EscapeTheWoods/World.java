@@ -66,6 +66,7 @@ public class World {
         var sb = new StringBuilder();
         sb.append("List of commands:\n");
         sb.append("help: display this message\n");
+        sb.append("to: go to an area\n");
         sb.append("eat, consume, drink: consume an item\n");
         sb.append("inventory: check your inventory\n");
         sb.append("stats: check your stats");
