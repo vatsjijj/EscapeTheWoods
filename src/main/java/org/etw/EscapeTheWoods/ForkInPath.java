@@ -27,9 +27,11 @@ public class ForkInPath extends Room {
     }
 
     /**
-     * Main logic for handling the player's encounter with the fork.
-     * 
-     * @param scanner A Scanner object for reading player input.
+     * Plays the level.
+     * @param player The player character.
+     * @param world The game world.
+     * @see Player
+     * @see World
      */
     public void play(Player player, World world) {
         Scanner scanner = new Scanner(System.in);

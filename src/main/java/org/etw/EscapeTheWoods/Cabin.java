@@ -56,6 +56,10 @@ public class Cabin extends Room {
      * fight back against the attack. The fight ends when
      * either the enemy dies, the player dies, or the player
      * flees.
+     * @param player The player character.
+     * @param world The game world.
+     * @see Player
+     * @see World
      */
     public void play(Player player, World world) {
         System.out.println("You see a cabin in the distance.");

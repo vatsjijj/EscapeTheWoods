@@ -69,7 +69,14 @@ public class Lake extends Room {
             return true;
         }
     }
-    //Method to implement player choice
+    
+    /**
+     * Plays the level.
+     * @param player The player character.
+     * @param world The game world.
+     * @see Player
+     * @see World
+     */
     public void play(Player player, World world){
         Scanner choice = new Scanner(System.in);
         String playerChoice = "";

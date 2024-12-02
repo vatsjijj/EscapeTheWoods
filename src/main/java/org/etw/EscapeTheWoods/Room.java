@@ -51,5 +51,12 @@ public class Room {
         return this.roomName;
     }
 
+    /**
+     * Plays the level.
+     * @param player The player character.
+     * @param world The game world.
+     * @see Player
+     * @see World
+     */
     public void play(Player player, World world) {}
 } // end of class

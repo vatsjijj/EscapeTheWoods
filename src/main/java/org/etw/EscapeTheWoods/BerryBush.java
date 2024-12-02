@@ -66,6 +66,13 @@ public class BerryBush extends Room {
         }
     }
 
+    /**
+     * Plays the level.
+     * @param player The player character.
+     * @param world The game world.
+     * @see Player
+     * @see World
+     */
     public void play(Player player, World world) {
         Scanner userIn = new Scanner(System.in);
         System.out.println("\nDo you want to pick the berries and eat them? Y/n");
