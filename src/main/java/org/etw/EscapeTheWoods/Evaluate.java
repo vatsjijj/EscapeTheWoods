@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.Queue;
 import java.util.ArrayDeque;
 
-
-
 /**
+ * An evaluation class for the command line interpreter.
  * @see ProgramResult
  * @see Token
  */
