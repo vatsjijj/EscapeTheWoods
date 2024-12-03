@@ -68,7 +68,7 @@ public class Main {
             case ProgramResult.To x:
                 handleRoom(x.room(), player, world);
                 player.position.play(player, world);
-                break;
+                return true;
             case ProgramResult.Eat       x:
                 player.eat(x.index());
                 System.out.println("Consumed an item!");
