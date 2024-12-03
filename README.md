@@ -5,4 +5,6 @@ the woods.
 This project is being written for CSE 201.
 
 ## Building
+The main file is located in `src/main/java/org/etw/EscapeTheWoods/Main.java`.
+
 To build this project you must have Java 21 installed. Running the gradle wrapper should build the jarfile. You can do this with `gradlew build`. The jarfile will be located at `build/libs`.
