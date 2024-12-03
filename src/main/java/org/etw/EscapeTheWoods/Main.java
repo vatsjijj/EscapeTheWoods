@@ -49,15 +49,15 @@ public class Main {
     protected static boolean eval(Scanner scanner, Player player, World world) {
         System.out.print("> ");
         String answer = "";
+        boolean ok = true;
         try {
             answer = scanner.nextLine() + '\n';
         } catch (NoSuchElementException e) {
-            answer = "Bad input!\n";
+            return false;
         }
         var tk = new Tokenizer(answer);
         var toks = tk.tokenize();
         var result = Evaluate.eval(toks, player);
-        boolean ok = true;
         switch (result) {
             case ProgramResult.Inventory x:
                 player.printInventory();
@@ -79,7 +79,7 @@ public class Main {
                 System.out.println(world.help()); break;
             case ProgramResult.Error     x:
                 System.err.println(x.msg());
-                ok = false;
+                // ok = false;
                 break;
         }
         return ok;
