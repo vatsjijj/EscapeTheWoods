@@ -51,7 +51,9 @@ public class Main {
         String answer = "";
         try {
             answer = scanner.nextLine() + '\n';
-        } catch (NoSuchElementException e) {}
+        } catch (NoSuchElementException e) {
+            answer = "y\n";
+        }
         var tk = new Tokenizer(answer);
         var toks = tk.tokenize();
         var result = Evaluate.eval(toks, player);
