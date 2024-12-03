@@ -86,7 +86,7 @@ public class Lake extends Room {
             System.out.println("What would you like to do?");
             System.out.println("1. Fish");
             System.out.println("2. Explore");
-            System.out.println("3. Leave the lake");
+            System.out.println("3. Leave");
             playerChoice = choice.nextLine();
 
             switch (playerChoice.toLowerCase()) {
