@@ -102,7 +102,6 @@ public class Tokenizer {
                 }
                 toks.add(identifier(start, idx));
             } else {
-                System.out.println("What are you doing man?");
                 break;
             }
         }

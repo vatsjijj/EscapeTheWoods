@@ -52,7 +52,7 @@ public class Main {
         try {
             answer = scanner.nextLine() + '\n';
         } catch (NoSuchElementException e) {
-            answer = "y\n";
+            answer = "Bad input!\n";
         }
         var tk = new Tokenizer(answer);
         var toks = tk.tokenize();
