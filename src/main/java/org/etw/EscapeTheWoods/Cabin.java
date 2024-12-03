@@ -2,6 +2,16 @@ package org.etw.EscapeTheWoods;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Class: BerryBush
+ * @author Tyler
+ * @version 1.0
+ * Course: CSE 201 Fall 2024
+ * Written: November 12, 2024
+ * 
+ * Purpose: A room of the scenerio where the player finds a cabin
+ */
+
 public class Cabin extends Room {
     // Attributes
     private Enemy enemy;
