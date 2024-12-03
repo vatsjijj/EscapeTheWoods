@@ -77,7 +77,7 @@ public class Cabin extends Room {
         boolean fleeSuccess = false;
         if (enemyEncounter()) {
             System.out.println("You have encountered an enemy!");
-            while(player.getHealth() > 0 || enemy.getHealth() > 0 || !fleeSuccess) {
+            while(player.getHealth() > 0 && enemy.getHealth() > 0 && !fleeSuccess) {
                 System.out.println("What will you do?");
                 System.out.println("Attack       Flee");
                 String choice = in.nextLine();
