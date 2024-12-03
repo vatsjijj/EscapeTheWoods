@@ -3,8 +3,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Class: BerryBush
- * @author Tyler
+ * Class: Cabin
+ * @author Tyler Daley
  * @version 1.0
  * Course: CSE 201 Fall 2024
  * Written: November 12, 2024
