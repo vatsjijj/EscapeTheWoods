@@ -1,5 +1,6 @@
 package org.etw.EscapeTheWoods;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 /**
@@ -47,7 +48,10 @@ public class Main {
 
     protected static boolean eval(Scanner scanner, Player player, World world) {
         System.out.print("> ");
-        var answer = scanner.nextLine() + '\n';
+        String answer = "";
+        try {
+            answer = scanner.nextLine() + '\n';
+        } catch (NoSuchElementException e) {}
         var tk = new Tokenizer(answer);
         var toks = tk.tokenize();
         var result = Evaluate.eval(toks, player);
